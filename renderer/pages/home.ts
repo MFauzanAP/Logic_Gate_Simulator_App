@@ -1,8 +1,11 @@
+//	Imports
 import React from 'react';
 import Head from 'next/head';
 
+//	Declare home page
 function Home () {
 
+	//	Return home page
 	return (
 		<>
 
@@ -19,4 +22,5 @@ function Home () {
 
 }
 
+//	Exports
 export default Home;
