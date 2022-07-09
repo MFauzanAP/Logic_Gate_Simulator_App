@@ -1,22 +1,25 @@
+//	Package Imports
 import React from 'react';
-import Head from 'next/head';
+import { styled } from '@/themes';
 
-function Home () {
+const Button = styled('button', {
+	backgroundColor		: 'transparent',
+	typeface			: '$header400',
+});
 
+//	Declare home page component
+const Home = () => {
+
+	//	Return page
 	return (
 		<>
 
-			{/* Head */}
-			<Head>
-
-				{/* Title */}
-				<title>Home - Nextron (with-typescript)</title>
-
-			</Head>
+			<Button type={'button'}>test</Button>
 
 		</>
 	);
 
 }
 
+//	Exports
 export default Home;

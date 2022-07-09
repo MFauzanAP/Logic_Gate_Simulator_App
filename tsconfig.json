@@ -17,7 +17,16 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": "./renderer",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/pages/*": ["pages/*"],
+      "@/public/*": ["public/*"],
+      "@/themes/*": ["themes/*"],
+      "@/themes": ["themes"],
+      "@/types": ["types"],
+    }
   },
   "exclude": [
     "node_modules",
