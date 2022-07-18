@@ -1,4 +1,4 @@
-//	Imports
+//	Type Imports
 import type * as Stitches from '@stitches/react';
 
 //	Declare typeface dictionary type

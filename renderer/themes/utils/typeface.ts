@@ -1,16 +1,21 @@
+//	Constant Imports
+import { TypefaceFormatRegex, TypefaceNameRegex, TypefaceSizeRegex } from '@/constants/regex';
+
+//	Helper Imports
+import { validateCSSValue } from '@/helpers';
+
 //	Imports
-import validate from './validation';
 import typefaces from '@/themes/tokens/typefaces';
-import { nameRegex, sizeRegex } from './constants';
 
 //  Declare function used to apply typeface styles
-const typeface = (token: string) => validate(
+const typeface = (token: string) => validateCSSValue(
+	TypefaceFormatRegex,
 	token,
 	(token: string) => {
 
 		//	Break down token into typeface name and size
-		const name = token.match(nameRegex)![0];
-		const size = token.match(sizeRegex)![0];
+		const name = token.match(TypefaceNameRegex)![0];
+		const size = token.match(TypefaceSizeRegex)![0];
 
 		//	Return typeface based on token
 		return typefaces[name][size];

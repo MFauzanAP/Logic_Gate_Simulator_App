@@ -21,6 +21,8 @@
     "baseUrl": "./renderer",
     "paths": {
       "@/components/*": ["components/*"],
+      "@/constants/*": ["constants/*"],
+      "@/helpers": ["helpers"],
       "@/pages/*": ["pages/*"],
       "@/public/*": ["public/*"],
       "@/themes/*": ["themes/*"],

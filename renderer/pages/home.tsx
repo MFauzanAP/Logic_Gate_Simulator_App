@@ -1,18 +1,20 @@
 //	Package Imports
 import React from 'react';
-import { styled } from '@/themes';
+import { styled, DarkTheme } from '@/themes';
 
 const Button = styled('button', {
 	cursor				: 'pointer',
 
+	width				: '100px',
 	height				: '40px',
 
-	padding				: '0 16px',
+	mx					: '10px',
+	my					: '25px',
 
 	color				: '$text100',
 	backgroundColor		: '$blue400',
 	border				: 'none',
-	borderRadius		: 10,
+	borderRadius		: 4,
 
 	typeface			: '$button100',
 });
