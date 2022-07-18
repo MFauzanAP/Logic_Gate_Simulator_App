@@ -3,11 +3,18 @@ import React from 'react';
 import { styled } from '@/themes';
 
 const Button = styled('button', {
-	color				: '$text600',
-	backgroundColor		: '$background100',
-	border				: '2px solid $blue400',
+	cursor				: 'pointer',
+
+	height				: '40px',
+
+	padding				: '0 16px',
+
+	color				: '$text100',
+	backgroundColor		: '$blue400',
+	border				: 'none',
 	borderRadius		: 10,
-	typeface			: '$header400',
+
+	typeface			: '$button100',
 });
 
 //	Declare home page component
