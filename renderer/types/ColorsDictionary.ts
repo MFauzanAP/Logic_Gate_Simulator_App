@@ -1,5 +1,5 @@
 //	Declare colors dictionary type
-interface ColorsDictionary {
+type ColorsDictionary = {
 	readonly [x: string]	: string | number | boolean,
 }
 

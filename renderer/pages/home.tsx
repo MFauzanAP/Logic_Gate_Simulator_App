@@ -3,7 +3,10 @@ import React from 'react';
 import { styled } from '@/themes';
 
 const Button = styled('button', {
-	backgroundColor		: 'transparent',
+	color				: '$text600',
+	backgroundColor		: '$background100',
+	border				: '2px solid $blue400',
+	borderRadius		: 10,
 	typeface			: '$header400',
 });
 

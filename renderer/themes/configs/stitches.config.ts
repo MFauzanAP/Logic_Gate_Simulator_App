@@ -9,7 +9,9 @@ import utils from '@/themes/utils';
 import { DarkColors, LightColors } from '@/themes/tokens/colors';
 
 //	Create base theme
-const BaseTheme = createStitches({ utils });
+const BaseTheme = createStitches({
+	utils,
+});
 
 //	Derive other themes
 const DarkTheme = BaseTheme.createTheme('dark-theme', { colors: DarkColors });
