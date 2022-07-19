@@ -25,6 +25,7 @@
       "@/helpers": ["helpers"],
       "@/pages/*": ["pages/*"],
       "@/public/*": ["public/*"],
+      "@/styles": ["styles"],
       "@/themes/*": ["themes/*"],
       "@/themes": ["themes"],
       "@/types": ["types"],
