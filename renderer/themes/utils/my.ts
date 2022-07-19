@@ -8,9 +8,9 @@ import { validateCSSValue } from '@/helpers';
 import type * as Stitches from '@stitches/react';
 
 //  Declare function used to apply vertical margin styles
-const my = (value: string) => validateCSSValue(
+const my = (value: Stitches.PropertyValue<'margin'>) => validateCSSValue(
 	ScaleFormatRegex,
-	value,
+	value as unknown as string,
 	(value: string) => {
 
 		//	Declare output css

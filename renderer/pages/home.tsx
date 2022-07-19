@@ -1,6 +1,6 @@
 //	Package Imports
 import React from 'react';
-import { styled, DarkTheme } from '@/themes';
+import { styled } from '@/themes';
 
 const Button = styled('button', {
 	cursor				: 'pointer',
