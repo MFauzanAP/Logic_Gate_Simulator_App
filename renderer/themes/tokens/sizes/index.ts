@@ -1,7 +1,7 @@
 //	Imports
-import iconSizes from "./icon";
-import radiiSizes from "./radii";
-import spaceSizes from "./space";
+import iconSizes from './icon';
+import radiiSizes from './radii';
+import spaceSizes from './space';
 
 //	Declare output object
 const sizes = {
