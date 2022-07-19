@@ -2,13 +2,13 @@
 import type * as Stitches from '@stitches/react';
 
 //	Declare validation function
-const validate = (formatRegex: RegExp, value: string, callback: (value: string) => Stitches.CSS, failed: (error: string) => Stitches.CSS) => {
+const validate = (value: string, callback: (value: string) => Stitches.CSS, failed: (error: string) => Stitches.CSS, formatRegex?: RegExp) => {
 
 	//	Check for runtime errors
 	try {
 
 		//	Make sure value matches format, if not then return an error
-		if (!value.match(formatRegex)) return failed('Failed to apply styling, value does not match format');
+		if (formatRegex && !value.match(formatRegex)) return failed('Failed to apply styling, value does not match format');
 
 		//	If nothing fails, then continue to function
 		return callback(value);

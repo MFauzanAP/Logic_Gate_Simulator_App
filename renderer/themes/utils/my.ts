@@ -9,7 +9,6 @@ import type * as Stitches from '@stitches/react';
 
 //  Declare function used to apply vertical margin styles
 const my = (value: Stitches.PropertyValue<'margin'>) => validateCSSValue(
-	ScaleFormatRegex,
 	value as unknown as string,
 	(value: string) => {
 
@@ -35,6 +34,7 @@ const my = (value: Stitches.PropertyValue<'margin'>) => validateCSSValue(
 		};
 
 	},
+	ScaleFormatRegex,
 );
 
 //	Exports

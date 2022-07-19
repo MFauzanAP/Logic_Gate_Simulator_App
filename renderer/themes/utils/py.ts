@@ -9,7 +9,6 @@ import type * as Stitches from '@stitches/react';
 
 //  Declare function used to apply vertical padding styles
 const my = (value: Stitches.PropertyValue<'padding'>) => validateCSSValue(
-	ScaleFormatRegex,
 	value as unknown as string,
 	(value: string) => {
 
@@ -27,14 +26,15 @@ const my = (value: Stitches.PropertyValue<'padding'>) => validateCSSValue(
 
 		//	Log errors
 		console.error(error);
-
+		
 		//	If there was an error, return no paddings
 		return {
 			paddingTop		: 0,
 			paddingBottom	: 0,
 		};
-
+		
 	},
+	ScaleFormatRegex,
 );
 
 //	Exports

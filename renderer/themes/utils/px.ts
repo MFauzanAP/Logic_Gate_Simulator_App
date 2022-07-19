@@ -9,16 +9,15 @@ import type * as Stitches from '@stitches/react';
 
 //  Declare function used to apply horizontal padding styles
 const mx = (value: Stitches.PropertyValue<'padding'>) => validateCSSValue(
-	ScaleFormatRegex,
 	value as unknown as string,
 	(value: string) => {
-
+		
 		//	Declare output css
 		const output: Stitches.CSS = {
 			paddingLeft		: value,
 			paddingRight	: value,
 		};
-
+		
 		//	Return horizontal paddings
 		return output;
 
@@ -33,8 +32,9 @@ const mx = (value: Stitches.PropertyValue<'padding'>) => validateCSSValue(
 			paddingLeft		: 0,
 			paddingRight	: 0,
 		};
-
+		
 	},
+	ScaleFormatRegex,
 );
 
 //	Exports
