@@ -25,7 +25,8 @@ type HelperFunctionProps = {
 	width			: string | number,
 	height			: string | number,
 	rotation		: number,
-	color			: string | number,
+	fill			: string,
+	stroke			: string,
 	thickness		: number,
 	linecap			: string,
 };

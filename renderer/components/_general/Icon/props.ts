@@ -9,7 +9,8 @@ interface IconProps extends ComponentProps {
 	width?			: number | string,
 	height?			: number | string,
 	rotation?		: number,
-	color?			: string,
+	fill?			: string,
+	stroke?			: string,
 	thickness?		: number,
 	linecap?		: string,
 

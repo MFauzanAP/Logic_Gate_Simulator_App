@@ -14,13 +14,13 @@ import { styled } from '@/themes';
 import type Props from './props';
 
 //	Declare component
-const Icon = ({ name, width, height, rotation, color, thickness, linecap, ...props }: Props) => {
+const Icon = ({ name, width, height, rotation, fill, stroke, thickness, linecap, ...props }: Props) => {
 
 	//	Extract icon component
 	const IconElement = styled(Icons[name]);
 
 	//	Return component jsx
-	return <IconElement css={composeIconCss({ width, height, rotation, color, thickness, linecap })} {...props} />;
+	return <IconElement css={composeIconCss({ width, height, rotation, fill, stroke, thickness, linecap })} {...props} />;
 
 };
 
@@ -29,7 +29,8 @@ Icon.defaultProps = {
 	width		: '$space4',
 	height		: '$space4',
 	rotation	: 0,
-	color		: '$text700',
+	fill		: 'none',
+	stroke		: '$text700',
 	thickness	: 2,
 	linecap		: 'round',
 };
