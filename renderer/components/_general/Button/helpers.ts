@@ -1,14 +1,14 @@
 //	Type Imports
-import type { ComponentChildren } from '@/types';
+import type { HelperFunctionProps } from './types';
 
 //	Declare function to compose button label
-const composeButtonLabel = (prop: string, children: ComponentChildren) => {
+const composeButtonLabel = ({ label, children }: HelperFunctionProps) => {
 
 	//	Prioritise children over prop
 	if (typeof children === 'string') return children;
 
 	//	If children is not of type string then return prop if it exists
-	if (prop) return prop;
+	if (label) return label;
 
 	//	Else return an empty string
 	return '';

@@ -11,17 +11,23 @@ import { ButtonContainer, ButtonLabel } from './styles';
 import type Props from './props';
 
 //	Declare component
-const Button = ({ label, icon, children, labelCss, ...props }: Props) => {
+const Button = ({ label, icon, iconPlacement, children, labelCss, ...props }: Props) => {
 
 	//	Compose button label
-	const buttonLabel = composeButtonLabel(label, children);
+	const buttonLabel = composeButtonLabel({ label, children });
 
 	//	Return component jsx
 	return (
 		<ButtonContainer type='button' {...props}>
 
+			{/* Left Icon */}
+			{iconPlacement === 'left' && icon !== undefined && icon}
+
 			{/* Label */}
 			{buttonLabel !== '' && <ButtonLabel css={labelCss}>{buttonLabel}</ButtonLabel>}
+
+			{/* Right Icon */}
+			{iconPlacement === 'right' && icon !== undefined && icon}
 
 		</ButtonContainer>
 	);
@@ -31,6 +37,7 @@ const Button = ({ label, icon, children, labelCss, ...props }: Props) => {
 //	Set default props
 Button.defaultProps = {
 	label			: 'Button',
+	iconPlacement	: 'right',
 };
 
 //  Exports
