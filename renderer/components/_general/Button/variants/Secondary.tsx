@@ -1,8 +1,8 @@
 //	Component Imports
-import Button from '@/components/_general/Button';
+import Button from '../Button';
 
 //	Type Imports
-import type { ButtonProps } from '@/components/_general/Button';
+import type ButtonProps from '../props';
 
 //	Declare variant
 const Secondary = (props: ButtonProps) => (

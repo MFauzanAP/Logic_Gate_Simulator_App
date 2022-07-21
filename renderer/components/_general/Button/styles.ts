@@ -20,7 +20,7 @@ const ButtonContainer = styled(
 		border				: 'none',
 		stroke				: '$text600',
 		fill				: '$text600',
-	}
+	},
 );
 
 //	Declare button label styling

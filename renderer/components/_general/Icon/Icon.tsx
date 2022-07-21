@@ -14,13 +14,36 @@ import { styled } from '@/themes';
 import type Props from './props';
 
 //	Declare component
-const Icon = ({ name, width, height, size, rotation, fill, stroke, thickness, linecap, ...props }: Props) => {
+const Icon = ({
+	name,
+	width,
+	height,
+	size,
+	rotation,
+	fill,
+	stroke,
+	thickness,
+	linecap,
+	...props
+}: Props) => {
 
 	//	Extract icon component
 	const IconElement = styled(Icons[name]);
 
+	//	Compose css
+	const css = composeIconCss({
+		width,
+		height,
+		size,
+		rotation,
+		fill,
+		stroke,
+		thickness,
+		linecap,
+	});
+
 	//	Return component jsx
-	return <IconElement css={composeIconCss({ width, height, size, rotation, fill, stroke, thickness, linecap })} {...props} />;
+	return <IconElement css={css} {...props} />;
 
 };
 

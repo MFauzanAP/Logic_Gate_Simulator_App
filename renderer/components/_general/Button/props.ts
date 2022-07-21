@@ -15,11 +15,11 @@ interface ButtonProps extends ComponentProps {
 	/** Where should the icon be placed? */
 	iconPlacement?	: IconPlacement,
 
-	/** Override the main container's CSS */
+	/** Changes the main container's CSS */
 	css?			: CSS,
-	/** Override the button label's CSS */
+	/** Changes the button label's CSS */
 	labelCss?		: CSS,
-	/** Override the button icon's CSS */
+	/** Changes the button icon's CSS */
 	iconCss?		: CSS,
 
 	/** Function called when the button is clicked */

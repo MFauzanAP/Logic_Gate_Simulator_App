@@ -3,7 +3,16 @@ import type { CSS } from '@/themes';
 import type { HelperFunctionProps } from './types';
 
 //	Declare function to compose icon css
-const composeIconCss = ({ width, height, size, rotation, fill, stroke, thickness, linecap }: HelperFunctionProps) => {
+const composeIconCss = ({
+	width,
+	height,
+	size,
+	rotation,
+	fill,
+	stroke,
+	thickness,
+	linecap,
+}: HelperFunctionProps) => {
 
 	//	Declare output css
 	const output: CSS = {
@@ -17,7 +26,7 @@ const composeIconCss = ({ width, height, size, rotation, fill, stroke, thickness
 	};
 
 	//	Return css object
-	return output
+	return output;
 
 };
 

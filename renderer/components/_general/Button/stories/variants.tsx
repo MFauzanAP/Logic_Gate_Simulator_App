@@ -2,7 +2,8 @@
 import React from 'react';
 
 //	Component Imports
-import Button, { DisabledButton, PrimaryButton, SecondaryButton } from '@/components/_general/Button';
+import Button from '../Button';
+import { DisabledButton, PrimaryButton, SecondaryButton } from '../variants';
 
 //	Type Imports
 import type { ComponentStory } from '@storybook/react';

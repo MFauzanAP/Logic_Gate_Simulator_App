@@ -2,8 +2,8 @@
 import type { ComponentMeta } from '@storybook/react';
 
 //	Component Imports
-import Button from '@/components/_general/Button';
 import Icon from '@/components/_general/Icon';
+import Button from '../Button';
 
 //	Declare component meta options
 const Meta: ComponentMeta<typeof Button> = {
