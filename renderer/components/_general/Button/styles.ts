@@ -12,8 +12,8 @@ const ButtonContainer = styled(
 
 		px					: '$space4',
 
-		flex				: '0',
-		flexGrow			: '0',
+		flex				: 0,
+		flexGrow			: 0,
 		gap					: '$space2',
 
 		backgroundColor		: '$background200',
@@ -25,6 +25,8 @@ const ButtonContainer = styled(
 const ButtonLabel = styled(
 	'p',
 	{
+		margin				: 0,
+
 		color				: '$text600',
 
 		typeface			: '$button100',

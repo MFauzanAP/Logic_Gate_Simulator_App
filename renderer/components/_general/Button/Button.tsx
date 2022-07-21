@@ -36,6 +36,7 @@ const Button = ({ label, icon, iconPlacement, children, labelCss, ...props }: Pr
 
 //	Set default props
 Button.defaultProps = {
+	as				: 'button',
 	label			: 'Button',
 	iconPlacement	: 'right',
 };

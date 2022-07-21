@@ -15,9 +15,9 @@ const Home = () => {
 				icon			= {<Icon name={'checkmark'} width={'$space2'} height={'$space2'} thickness={2} stroke={'$text600'} />}
 			/>
 			<Button
-				css				= {{ gradient: '$linear100' }}
+				css				= {{ width: 50, height: 40, gradient: '$linear100' }}
 				label			= {''}
-				icon			= {<Icon name={'home'} width={'$space2'} height={'$space2'} thickness={0} fill={'$text100'} />}
+				icon			= {<Icon name={'home'} width={'$space4'} height={'$space4'} thickness={0} fill={'$text100'} />}
 			/>
 
 			<Icon name={'zoomIn'} width={'$space4'} height={'$space4'} thickness={2} stroke={'$text600'} />
