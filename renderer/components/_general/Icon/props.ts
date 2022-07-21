@@ -8,6 +8,7 @@ interface IconProps extends ComponentProps {
 	name			: IconName,
 	width?			: number | string,
 	height?			: number | string,
+	size?			: number | string,
 	rotation?		: number,
 	fill?			: string,
 	stroke?			: string,

@@ -19,6 +19,8 @@ interface ButtonProps extends ComponentProps {
 	css?			: CSS,
 	/** Override the button label's CSS */
 	labelCss?		: CSS,
+	/** Override the button icon's CSS */
+	iconCss?		: CSS,
 
 	/** Function called when the button is clicked */
 	onClick?		: () => void,

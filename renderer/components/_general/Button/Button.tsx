@@ -11,7 +11,7 @@ import { ButtonContainer, ButtonLabel } from './styles';
 import type Props from './props';
 
 //	Declare component
-const Button = ({ label, icon, iconPlacement, children, labelCss, ...props }: Props) => {
+const Button = ({ label, icon, iconPlacement, children, labelCss, iconCss, ...props }: Props) => {
 
 	//	Compose button label
 	const buttonLabel = composeButtonLabel({ label, children });
@@ -21,13 +21,13 @@ const Button = ({ label, icon, iconPlacement, children, labelCss, ...props }: Pr
 		<ButtonContainer type='button' {...props}>
 
 			{/* Left Icon */}
-			{iconPlacement === 'left' && icon !== undefined && icon}
+			{iconPlacement === 'left' && icon !== undefined && React.cloneElement(icon as any, iconCss && { css: iconCss })}
 
 			{/* Label */}
 			{buttonLabel !== '' && <ButtonLabel css={labelCss}>{buttonLabel}</ButtonLabel>}
 
 			{/* Right Icon */}
-			{iconPlacement === 'right' && icon !== undefined && icon}
+			{iconPlacement === 'right' && icon !== undefined && React.cloneElement(icon as any, iconCss && { css: iconCss })}
 
 		</ButtonContainer>
 	);

@@ -2,10 +2,10 @@
 import type { ComponentMeta } from '@storybook/react';
 
 //	Component Imports
-import Button from '@/components/_general/Button';
+import Button from '../Button';
 import Icon from '@/components/_general/Icon';
 
-//	Declare meta object
+//	Declare component meta options
 const Meta: ComponentMeta<typeof Button> = {
 	title		  	: 'Components/Button',
 	component		: Button,
@@ -15,6 +15,11 @@ const Meta: ComponentMeta<typeof Button> = {
 		iconPlacement	: 'right',
 	},
 	argTypes		: {
+		as				: { control: false },
+		css				: { control: false },
+		labelCss		: { control: false },
+		iconCss			: { control: false },
+		onClick			: { control: false },
 		icon			: {
 			options			: [ 'Close', 'Checkmark' ],
 			mapping			: {

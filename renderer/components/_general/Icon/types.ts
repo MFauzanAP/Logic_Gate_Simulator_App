@@ -24,6 +24,7 @@ type IconList = {
 type HelperFunctionProps = {
 	width			: string | number,
 	height			: string | number,
+	size			: string | number,
 	rotation		: number,
 	fill			: string,
 	stroke			: string,

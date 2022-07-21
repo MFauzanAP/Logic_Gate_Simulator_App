@@ -1,6 +1,7 @@
 import { LightTheme, DarkTheme } from '@/themes';
 
 export const parameters = {
+  controls: { expanded: true },
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
