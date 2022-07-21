@@ -2,7 +2,7 @@
 import type { ComponentMeta } from '@storybook/react';
 
 //	Component Imports
-import Icon from '../Icon';
+import Icon from '@/components/_general/Icon';
 
 //	Declare component meta options
 const Meta: ComponentMeta<typeof Icon> = {

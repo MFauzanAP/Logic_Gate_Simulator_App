@@ -2,7 +2,7 @@
 import React from 'react';
 
 //	Component Imports
-import Icon from '../Icon';
+import Icon from '@/components/_general/Icon';
 
 //	Type Imports
 import type { ComponentStory } from '@storybook/react';

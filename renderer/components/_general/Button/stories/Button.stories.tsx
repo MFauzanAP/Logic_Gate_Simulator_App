@@ -2,7 +2,7 @@
 import type { ComponentMeta } from '@storybook/react';
 
 //	Component Imports
-import Button from '../Button';
+import Button from '@/components/_general/Button';
 import Icon from '@/components/_general/Icon';
 
 //	Declare component meta options
@@ -23,8 +23,8 @@ const Meta: ComponentMeta<typeof Button> = {
 		icon			: {
 			options			: [ 'Close', 'Checkmark' ],
 			mapping			: {
-				Close			: <Icon name={'close'} width={'$space2'} height={'$space2'} thickness={2} stroke={'$text600'} />,
-				Checkmark		: <Icon name={'checkmark'} width={'$space2'} height={'$space2'} thickness={2} stroke={'$text600'} />,
+				Close			: <Icon name={'close'} width={'$space2'} height={'$space2'} thickness={2} />,
+				Checkmark		: <Icon name={'checkmark'} width={'$space2'} height={'$space2'} thickness={2} />,
 			},
 		},
 	},

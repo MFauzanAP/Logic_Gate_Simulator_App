@@ -27,8 +27,8 @@ const Icon = ({ name, width, height, size, rotation, fill, stroke, thickness, li
 //	Set default props
 Icon.defaultProps = {
 	rotation	: 0,
-	fill		: 'none',
-	stroke		: '$text700',
+	fill		: 'inherit',
+	stroke		: 'inherit',
 	thickness	: 2,
 	linecap		: 'round',
 };

@@ -18,6 +18,8 @@ const ButtonContainer = styled(
 
 		backgroundColor		: '$background200',
 		border				: 'none',
+		stroke				: '$text600',
+		fill				: '$text600',
 	}
 );
 
