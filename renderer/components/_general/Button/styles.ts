@@ -1,12 +1,12 @@
 //	Style Imports
 import { styled } from '@/themes';
-import { clickable, flexCenter } from '@/styles';
+import { clickable, flexContainer } from '@/styles';
 
 //	Declare button container styling
 const ButtonContainer = styled(
 	'button',
 	clickable,
-	flexCenter,
+	flexContainer,
 	{
 		height				: '$space8',
 
@@ -22,6 +22,12 @@ const ButtonContainer = styled(
 		fill				: '$text600',
 
 		textDecoration		: 'none',
+
+		defaultVariants		: {
+			direction			: 'row',
+			hAlign				: 'center',
+			vAlign				: 'center',
+		},
 	},
 );
 
