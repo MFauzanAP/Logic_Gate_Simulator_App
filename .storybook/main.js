@@ -1,6 +1,9 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
+  "features": {
+    "interactionsDebugger": true
+  },
   "stories": [
     "../renderer/**/*.stories.mdx",
     "../renderer/**/*.stories.tsx"

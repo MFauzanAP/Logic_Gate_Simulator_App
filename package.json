@@ -12,7 +12,7 @@
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "cypress": "cypress open"
+    "test": "test-storybook"
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
@@ -28,8 +28,10 @@
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",
     "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/jest": "0.0.10",
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/react": "^6.5.9",
+    "@storybook/test-runner": "^0.5.0",
     "@storybook/testing-library": "0.0.13",
     "@storybook/testing-react": "^1.3.0",
     "@svgr/webpack": "^6.3.0",
@@ -38,7 +40,6 @@
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
     "babel-loader": "^8.2.5",
-    "cypress": "^10.3.1",
     "electron": "^17.1.2",
     "electron-builder": "23.0.2",
     "eslint": "^8.14.0",
@@ -50,6 +51,7 @@
     "eslint-plugin-react-hooks": "^4.4.0",
     "eslint-plugin-storybook": "^0.6.1",
     "husky": "^8.0.0",
+    "jest": "27.0.0",
     "next": "^12.1.0",
     "nextron": "^8.0.0",
     "react": "^17.0.2",

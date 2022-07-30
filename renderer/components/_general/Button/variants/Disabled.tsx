@@ -10,6 +10,7 @@ const Disabled = (props: ButtonProps) => (
 		css			= {{
 			backgroundColor	: '$background300',
 			stroke			: '$text300',
+			cursor			: 'default',
 		}}
 		labelCss	= {{
 			color			: '$text300',

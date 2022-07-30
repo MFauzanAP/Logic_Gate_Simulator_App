@@ -20,6 +20,8 @@ const ButtonContainer = styled(
 		border				: 'none',
 		stroke				: '$text600',
 		fill				: '$text600',
+
+		textDecoration		: 'none',
 	},
 );
 
@@ -32,6 +34,7 @@ const ButtonLabel = styled(
 		color				: '$text600',
 
 		typeface			: '$button100',
+		textDecoration		: 'none',
 	},
 );
 

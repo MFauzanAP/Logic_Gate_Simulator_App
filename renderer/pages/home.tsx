@@ -11,10 +11,11 @@ const Home = () => {
 		<>
 
 			<Button
+				as				= {'a'}
 				label			= {'Done'}
 				icon			= {<Icon name={'checkmark'} width={'$space2'} height={'$space2'} thickness={2} stroke={'$text600'} />}
 			/>
-			<PrimaryButton />
+			<PrimaryButton as={'a'} />
 			<Button
 				css				= {{ width: 50, height: 40, gradient: '$linear200' }}
 				label			= {''}

@@ -22,6 +22,8 @@ interface ButtonProps extends ComponentProps {
 	/** Changes the button icon's CSS */
 	iconCss?		: CSS,
 
+	/** Specifies which link should be opened when the button is clicked. Button must be an <a/> element */
+	href?			: string,
 	/** Function called when the button is clicked */
 	onClick?		: () => void,
 }
