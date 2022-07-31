@@ -13,7 +13,13 @@ import { styled } from '@/themes';
 //	Type Imports
 import type Props from './props';
 
-//	Declare component
+/**
+ * Requires that you pass in a `name` prop to display an icon.
+ * 
+ * Can be made to spin through the `spin` prop.
+ * 
+ * The list of props supported is shown below. Any additional props will be passed to the root container of `<Icon>`.
+ */
 const Icon = ({
 	name,
 	width,

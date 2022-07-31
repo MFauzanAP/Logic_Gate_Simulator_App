@@ -33,6 +33,9 @@ const Meta: ComponentMeta<typeof Icon> = {
 			},
 		},
 	},
+	parameters		: {
+		componentSubtitle	: 'Component used to display an icon',
+	},
 };
 
 //	Exports

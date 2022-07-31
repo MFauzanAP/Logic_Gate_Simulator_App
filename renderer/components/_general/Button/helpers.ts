@@ -1,7 +1,15 @@
 //	Type Imports
 import type { HelperFunctionProps } from './types';
 
-//	Declare function to compose button label
+/**
+ * Composes button content from its children and label props.
+ * 
+ * Prioritises children over the label prop.
+ * 
+ * @param 	{string} 			label		The button label in string form
+ * @param 	{ComponentChildren}	children	The button label in component children form
+ * @returns	{string}						Button content from either the label prop or component children
+ */
 const composeButtonLabel = ({ label, children }: HelperFunctionProps) => {
 
 	//	Prioritise children over prop

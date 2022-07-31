@@ -13,7 +13,10 @@ import { ButtonContainer, ButtonLabel } from './styles';
 //	Type Imports
 import type Props from './props';
 
-//	Declare component
+/**
+ * Renders as a `<button>` by default but can be changed to render as an `<a>` via the `as` prop.
+ * The list of props supported is shown below. Any additional props will be passed to the root container of `<Button>`.
+ */
 const Button = ({
 	as,
 	label,

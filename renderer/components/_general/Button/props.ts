@@ -9,7 +9,7 @@ interface ButtonProps extends ComponentProps {
 	/**
 	 * What element should the button be rendered as?
 	 *
-	 * NOTE when rendering as an "a" you must pass a `href` tag!
+	 * ! **NOTE** when rendering as an "a" you must pass a `href` tag!
 	 *
 	 * @type {'button' | 'a'}
 	 * @default 'button'
