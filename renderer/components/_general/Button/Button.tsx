@@ -20,13 +20,14 @@ import type Props from './props';
 const Button = ({
 	as,
 	label,
+	href,
+	disabled,
 	startIcon,
 	endIcon,
 	children,
 	labelCss,
 	startIconCss,
 	endIconCss,
-	href,
 	...props
 }: Props) => {
 
@@ -42,7 +43,7 @@ const Button = ({
 			{typeof startIcon === 'string' && <Icon name={startIcon} width={'$space2'} height={'$space2'} thickness={2} css={startIconCss} />}
 
 			{/* Label */}
-			{buttonLabel !== '' && <ButtonLabel css={labelCss}>{buttonLabel}</ButtonLabel>}
+			{buttonLabel !== '' && <ButtonLabel css={labelCss} disabled={disabled}>{buttonLabel}</ButtonLabel>}
 
 			{/* End Icon */}
 			{endIcon && typeof endIcon !== 'string' && React.cloneElement(endIcon as any, endIconCss && { css: endIconCss })}
@@ -54,8 +55,8 @@ const Button = ({
 	//	Return component jsx
 	return (
 		as === 'a'
-			? <a href={href}><ButtonContainer type={'button'} {...props}>{buttonContent}</ButtonContainer></a>
-			: <ButtonContainer type={'button'} {...props}>{buttonContent}</ButtonContainer>
+			? <a href={href}><ButtonContainer type={'button'} disabled={disabled} {...props}>{buttonContent}</ButtonContainer></a>
+			: <ButtonContainer type={'button'} disabled={disabled} {...props}>{buttonContent}</ButtonContainer>
 	);
 
 };
@@ -64,6 +65,7 @@ const Button = ({
 Button.defaultProps = {
 	as				: 'button',
 	label			: 'Button',
+	shape			: 'block',
 	startIconCss	: undefined,
 	endIconCss		: undefined,
 };

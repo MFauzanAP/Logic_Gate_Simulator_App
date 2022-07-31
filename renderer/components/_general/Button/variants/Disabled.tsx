@@ -4,18 +4,16 @@ import Button from '../Button';
 //	Type Imports
 import type ButtonProps from '../props';
 
-//	Declare variant
+/**
+ * Disabled variant of the default button.
+ * This variant is unclickable and greyed out.
+ * 
+ * @example
+ * <DisabledButton />
+ */
 const Disabled = (props: ButtonProps) => (
 	<Button
-		css			= {{
-			backgroundColor	: '$background300',
-			stroke			: '$text300',
-			cursor			: 'default',
-		}}
-		labelCss	= {{
-			color			: '$text300',
-			fontWeight		: '500',
-		}}
+		disabled
 		{...props}
 	/>
 );

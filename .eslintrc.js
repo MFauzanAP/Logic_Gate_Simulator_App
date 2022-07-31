@@ -62,6 +62,24 @@ module.exports = {
 				ignoreDestructuring: true,
 			},
 		],
+		'require-jsdoc': [
+			'error',
+			{
+				require: {
+					FunctionDeclaration: false,
+					MethodDefinition: false,
+					ClassDeclaration: false,
+					ArrowFunctionExpression: true,
+					FunctionExpression: false,
+				},
+			},
+		],
+		'no-trailing-spaces': [
+			'error',
+			{
+				ignoreComments: true,
+			},
+		],
 		'react/jsx-curly-brace-presence': [
 			'error',
 			{

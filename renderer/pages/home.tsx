@@ -18,7 +18,7 @@ const Home = () => {
 					stroke			: '$text600',
 				}}
 			/>
-			<PrimaryButton as={'a'} />
+			<PrimaryButton as={'a'} shape={'pill'} />
 			<Button
 				css				= {{ width: 50, height: 40, gradient: '$linear200' }}
 				label			= {''}

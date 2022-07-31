@@ -20,6 +20,7 @@ const flexContainer = css({
 				flexDirection	: 'row',
 			},
 		},
+
 		hAlign			: {
 			left			: {
 				$$hAlign	: 'flex-start',
@@ -31,6 +32,7 @@ const flexContainer = css({
 				$$hAlign	: 'flex-end',
 			},
 		},
+
 		vAlign			: {
 			left			: {
 				$$vAlign	: 'flex-start',

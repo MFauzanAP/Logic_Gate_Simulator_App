@@ -7,6 +7,7 @@ import type ButtonProps from '../props';
 //	Declare variant
 const Primary = (props: ButtonProps) => (
 	<Button
+		shape		= {'pill'}
 		css			= {{
 			backgroundColor	: '$purple400',
 			stroke			: '$text100',

@@ -23,7 +23,28 @@ const ButtonContainer = styled(
 
 		textDecoration		: 'none',
 
+		variants			: {
+			disabled			: {
+				true				: {
+					cursor				: 'default',
+
+					backgroundColor		: '$background200',
+					stroke				: '$text200',
+				},
+			},
+
+			shape				: {
+				block				: {
+					borderRadius		: '$radii0',
+				},
+				pill				: {
+					borderRadius		: '$radiiInfinity',
+				},
+			},
+		},
+
 		defaultVariants		: {
+			//	@ts-ignore
 			direction			: 'row',
 			hAlign				: 'center',
 			vAlign				: 'center',
@@ -41,6 +62,16 @@ const ButtonLabel = styled(
 
 		typeface			: '$button100',
 		textDecoration		: 'none',
+
+		variants			: {
+			disabled			: {
+				true				: {
+					color				: '$text200',
+
+					fontWeight			: '500',
+				},
+			},
+		},
 	},
 );
 

@@ -25,6 +25,29 @@ interface ButtonProps extends ComponentProps {
 	label?			: string,
 
 	/**
+	 * Specifies which link should be opened when the button is clicked. Button must be an <a/> element
+	 *
+	 * @type {string}
+	 * */
+	href?			: string,
+
+	/**
+	 * Is the button disabled?
+	 * 
+	 * A disabled button cannot be clicked and will have a greyed out appearance
+	 * 
+	 * @type {boolean}
+	 * */
+	disabled?		: boolean,
+
+	/**
+	 * Specifies the shape of the button
+	 * 
+	 * @type {'block' | 'pill'}
+	 * */
+	shape?			: 'block' | 'pill',
+
+	/**
 	 * What icon should be displayed at the start?
 	 *
 	 * @type {IconName & ReactNode}
@@ -71,13 +94,6 @@ interface ButtonProps extends ComponentProps {
 	 * @default null
 	 * */
 	endIconCss?		: CSS,
-
-	/**
-	 * Specifies which link should be opened when the button is clicked. Button must be an <a/> element
-	 *
-	 * @type {string}
-	 * */
-	href?			: string,
 
 	/**
 	 * Function called when the button is clicked

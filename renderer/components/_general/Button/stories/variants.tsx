@@ -3,7 +3,8 @@ import React from 'react';
 
 //	Component Imports
 import Button from '../Button';
-import { DisabledButton, PrimaryButton, SecondaryButton } from '../variants';
+import { PrimaryButton, SecondaryButton } from '../variants';
+import Disabled from './Disabled';
 
 //	Type Imports
 import type { ComponentStory } from '@storybook/react';
@@ -13,7 +14,6 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 //  Declare variants
 const Default = Template.bind({});
-const Disabled: ComponentStory<typeof DisabledButton> = (args) => <DisabledButton {...args} />;
 const Primary: ComponentStory<typeof PrimaryButton> = (args) => <PrimaryButton {...args} />;
 const Secondary: ComponentStory<typeof SecondaryButton> = (args) => <SecondaryButton {...args} />;
 
