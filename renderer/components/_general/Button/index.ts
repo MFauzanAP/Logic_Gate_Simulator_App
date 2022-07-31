@@ -7,6 +7,7 @@ export default Component;
 export type { default as ButtonProps } from './props';
 export * from './variants';
 export * from './styles';
+export * from './types';
 export {
 	Stories,
 };

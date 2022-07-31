@@ -1,6 +1,9 @@
 //	Package Imports
 import React from 'react';
 
+//	Component Imports
+import Icon from '@/components/_general/Icon';
+
 //	Helper Imports
 import { composeButtonLabel } from './helpers';
 
@@ -14,11 +17,12 @@ import type Props from './props';
 const Button = ({
 	as,
 	label,
-	icon,
-	iconPlacement,
+	startIcon,
+	endIcon,
 	children,
 	labelCss,
-	iconCss,
+	startIconCss,
+	endIconCss,
 	href,
 	...props
 }: Props) => {
@@ -26,37 +30,29 @@ const Button = ({
 	//	Compose button label
 	const buttonLabel = composeButtonLabel({ label, children });
 
+	//	Declare button content
+	const buttonContent = (
+		<>
+
+			{/* Start Icon */}
+			{startIcon && typeof startIcon !== 'string' && React.cloneElement(startIcon as any, startIconCss && { css: startIconCss })}
+			{typeof startIcon === 'string' && <Icon name={startIcon} width={'$space2'} height={'$space2'} thickness={2} css={startIconCss} />}
+
+			{/* Label */}
+			{buttonLabel !== '' && <ButtonLabel css={labelCss}>{buttonLabel}</ButtonLabel>}
+
+			{/* End Icon */}
+			{endIcon && typeof endIcon !== 'string' && React.cloneElement(endIcon as any, endIconCss && { css: endIconCss })}
+			{typeof endIcon === 'string' && <Icon name={endIcon} width={'$space2'} height={'$space2'} thickness={2} css={endIconCss} />}
+
+		</>
+	);
+
 	//	Return component jsx
 	return (
 		as === 'a'
-			? (
-				<a href={href}><ButtonContainer type={'button'} {...props}>
-
-					{/* Left Icon */}
-					{iconPlacement === 'left' && icon !== undefined && React.cloneElement(icon as any, iconCss && { css: iconCss })}
-
-					{/* Label */}
-					{buttonLabel !== '' && <ButtonLabel css={labelCss}>{buttonLabel}</ButtonLabel>}
-
-					{/* Right Icon */}
-					{iconPlacement === 'right' && icon !== undefined && React.cloneElement(icon as any, iconCss && { css: iconCss })}
-
-				</ButtonContainer></a>
-			)
-			: (
-				<ButtonContainer type={'button'} {...props}>
-
-					{/* Left Icon */}
-					{iconPlacement === 'left' && icon !== undefined && React.cloneElement(icon as any, iconCss && { css: iconCss })}
-
-					{/* Label */}
-					{buttonLabel !== '' && <ButtonLabel css={labelCss}>{buttonLabel}</ButtonLabel>}
-
-					{/* Right Icon */}
-					{iconPlacement === 'right' && icon !== undefined && React.cloneElement(icon as any, iconCss && { css: iconCss })}
-
-				</ButtonContainer>
-			)
+			? <a href={href}><ButtonContainer type={'button'} {...props}>{buttonContent}</ButtonContainer></a>
+			: <ButtonContainer type={'button'} {...props}>{buttonContent}</ButtonContainer>
 	);
 
 };
@@ -65,7 +61,8 @@ const Button = ({
 Button.defaultProps = {
 	as				: 'button',
 	label			: 'Button',
-	iconPlacement	: 'right',
+	startIconCss	: undefined,
+	endIconCss		: undefined,
 };
 
 //  Exports

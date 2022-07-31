@@ -13,13 +13,23 @@ const Home = () => {
 			<Button
 				as				= {'a'}
 				label			= {'Done'}
-				icon			= {<Icon name={'checkmark'} width={'$space2'} height={'$space2'} thickness={2} stroke={'$text600'} />}
+				endIcon			= {'checkmark'}
+				endIconCss		= {{
+					stroke			: '$text600',
+				}}
 			/>
 			<PrimaryButton as={'a'} />
 			<Button
 				css				= {{ width: 50, height: 40, gradient: '$linear200' }}
 				label			= {''}
-				icon			= {<Icon name={'home'} width={'$space4'} height={'$space4'} thickness={0} fill={'$text100'} />}
+				startIcon		= {'home'}
+				startIconCss	= {{
+					width			: '$space4',
+					height			: '$space4',
+
+					fill			: '$text100',
+					strokeWidth		: 0,
+				}}
 			/>
 
 			<Icon name={'zoomIn'} width={'$space4'} height={'$space4'} thickness={2} fill={'none'} stroke={'$text600'} />

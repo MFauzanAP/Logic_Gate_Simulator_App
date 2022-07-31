@@ -12,6 +12,7 @@ const composeIconCss = ({
 	stroke,
 	thickness,
 	linecap,
+	css,
 }: HelperFunctionProps) => {
 
 	//	Declare output css
@@ -23,6 +24,7 @@ const composeIconCss = ({
 		height			: size || height,
 		fill,
 		stroke,
+		...(css || {}),
 	};
 
 	//	Return css object

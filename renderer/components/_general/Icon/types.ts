@@ -1,3 +1,6 @@
+//	Type Imports
+import type { CSS } from '@/themes';
+
 //	Declare icon name type
 type IconName = (
 	'ampersand'
@@ -30,6 +33,7 @@ type HelperFunctionProps = {
 	stroke			: string,
 	thickness		: number,
 	linecap			: string,
+	css?			: CSS,
 };
 
 //	Exports

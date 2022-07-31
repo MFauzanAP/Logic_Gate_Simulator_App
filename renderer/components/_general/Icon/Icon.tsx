@@ -24,6 +24,7 @@ const Icon = ({
 	stroke,
 	thickness,
 	linecap,
+	css,
 	...props
 }: Props) => {
 
@@ -31,7 +32,7 @@ const Icon = ({
 	const IconElement = styled(Icons[name]);
 
 	//	Compose css
-	const css = composeIconCss({
+	const finalCss = composeIconCss({
 		width,
 		height,
 		size,
@@ -40,10 +41,11 @@ const Icon = ({
 		stroke,
 		thickness,
 		linecap,
+		css,
 	});
 
 	//	Return component jsx
-	return <IconElement css={css} {...props} />;
+	return <IconElement css={finalCss} {...props} />;
 
 };
 
