@@ -33,5 +33,25 @@ const Icons: IconList = {
 	zoomIn,
 };
 
+//	Declare icon names
+const IconNames = [
+	'ampersand',
+	'checkmark',
+	'chevron',
+	'close',
+	'focus',
+	'home',
+	'lightBulb',
+	'maximize',
+	'microchip',
+	'minimize',
+	'power',
+	'zoomOut',
+	'zoomIn',
+] as const;
+
 //  Exports
-export default Icons;
+export {
+	Icons,
+	IconNames,
+};

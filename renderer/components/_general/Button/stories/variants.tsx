@@ -4,23 +4,56 @@ import React from 'react';
 //	Component Imports
 import Button from '../Button';
 import { PrimaryButton, SecondaryButton } from '../variants';
-import Disabled from './Disabled';
 
-//	Type Imports
-import type { ComponentStory } from '@storybook/react';
+//  Declare component variants
+//	eslint-disable-next-line require-jsdoc
+const Variants = () => (
+	<div style={{ display: 'flex', gap: '24px' }}>
 
-//	Create component template
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+		{/* Default Button */}
+		<Button />
 
-//  Declare variants
-const Default = Template.bind({});
-const Primary: ComponentStory<typeof PrimaryButton> = (args) => <PrimaryButton {...args} />;
-const Secondary: ComponentStory<typeof SecondaryButton> = (args) => <SecondaryButton {...args} />;
+		{/* Primary Button */}
+		<PrimaryButton />
+
+		{/* Secondary Button */}
+		<SecondaryButton />
+
+	</div>
+);
+
+//	Set story parameters
+Variants.parameters = {
+	docs		: {
+		storyDescription	: `
+The button can have these variations:
+- \`<Button />\`
+- \`<PrimaryButton />\`
+- \`<SecondaryButton />\`
+
+which is chosen by importing the desired variation.
+`,
+		source				: {
+			expanded			: true,
+			language			: 'jsx',
+			code				: `
+//	Component Imports
+import Button, { PrimaryButton, SecondaryButton } from '@/components/_general/Button';
+
+...
+
+{/* Default Button */}
+<Button />
+
+{/* Primary Button */}
+<PrimaryButton />
+
+{/* Secondary Button */}
+<SecondaryButton />
+			`,
+		},
+	},
+};
 
 //  Exports
-export {
-	Default,
-	Disabled,
-	Primary,
-	Secondary,
-};
+export default Variants;

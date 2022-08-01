@@ -32,7 +32,7 @@ const Home = () => {
 				}}
 			/>
 
-			<Icon name={'zoomIn'} width={'$space4'} height={'$space4'} thickness={2} fill={'none'} stroke={'$text600'} />
+			<Icon name={'chevron'} size={'$space16'} thickness={2} fill={'none'} stroke={'$text600'} />
 
 		</>
 	);

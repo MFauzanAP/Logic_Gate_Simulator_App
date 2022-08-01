@@ -2,7 +2,7 @@
 import React from 'react';
 
 //	Constants Imports
-import Icons from './constants';
+import { Icons } from './constants';
 
 //	Helper Imports
 import { composeIconCss } from './helpers';
@@ -15,9 +15,7 @@ import type Props from './props';
 
 /**
  * Requires that you pass in a `name` prop to display an icon.
- * 
  * Can be made to spin through the `spin` prop.
- * 
  * The list of props supported is shown below. Any additional props will be passed to the root container of `<Icon>`.
  */
 const Icon = ({
@@ -58,6 +56,7 @@ const Icon = ({
 //	Set default props
 Icon.defaultProps = {
 	rotation	: 0,
+	size		: '$space4',
 	fill		: 'inherit',
 	stroke		: 'inherit',
 	thickness	: 2,

@@ -8,7 +8,7 @@ import Icon from '@/components/_general/Icon';
 import { composeButtonLabel } from './helpers';
 
 //	Style Imports
-import { ButtonContainer, ButtonLabel } from './styles';
+import { ButtonContainer, ButtonLabel, ButtonLink } from './styles';
 
 //	Type Imports
 import type Props from './props';
@@ -39,15 +39,15 @@ const Button = ({
 		<>
 
 			{/* Start Icon */}
-			{startIcon && typeof startIcon !== 'string' && React.cloneElement(startIcon as any, startIconCss && { css: startIconCss })}
-			{typeof startIcon === 'string' && <Icon name={startIcon} width={'$space2'} height={'$space2'} thickness={2} css={startIconCss} />}
+			{startIcon !== undefined && typeof startIcon !== 'string' && React.cloneElement(startIcon as any, startIconCss && { css: startIconCss })}
+			{typeof startIcon === 'string' && <Icon name={startIcon} size={'$space2'} thickness={2} css={startIconCss} />}
 
 			{/* Label */}
 			{buttonLabel !== '' && <ButtonLabel css={labelCss} disabled={disabled}>{buttonLabel}</ButtonLabel>}
 
 			{/* End Icon */}
-			{endIcon && typeof endIcon !== 'string' && React.cloneElement(endIcon as any, endIconCss && { css: endIconCss })}
-			{typeof endIcon === 'string' && <Icon name={endIcon} width={'$space2'} height={'$space2'} thickness={2} css={endIconCss} />}
+			{endIcon !== undefined && typeof endIcon !== 'string' && React.cloneElement(endIcon as any, endIconCss && { css: endIconCss })}
+			{typeof endIcon === 'string' && <Icon name={endIcon} size={'$space2'} thickness={2} css={endIconCss} />}
 
 		</>
 	);
@@ -55,7 +55,7 @@ const Button = ({
 	//	Return component jsx
 	return (
 		as === 'a'
-			? <a href={href}><ButtonContainer type={'button'} disabled={disabled} {...props}>{buttonContent}</ButtonContainer></a>
+			? <ButtonLink href={href}><ButtonContainer type={'button'} disabled={disabled} {...props}>{buttonContent}</ButtonContainer></ButtonLink>
 			: <ButtonContainer type={'button'} disabled={disabled} {...props}>{buttonContent}</ButtonContainer>
 	);
 
@@ -65,6 +65,7 @@ const Button = ({
 Button.defaultProps = {
 	as				: 'button',
 	label			: 'Button',
+	disabled		: false,
 	shape			: 'block',
 	startIconCss	: undefined,
 	endIconCss		: undefined,

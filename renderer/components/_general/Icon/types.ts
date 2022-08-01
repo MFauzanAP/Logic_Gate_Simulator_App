@@ -1,26 +1,15 @@
+//	Constant Imports
+import { IconNames } from './constants';
+
 //	Type Imports
 import type { CSS } from '@/themes';
 
 //	Declare icon name type
-type IconName = (
-	'ampersand'
-	| 'checkmark'
-	| 'chevron'
-	| 'close'
-	| 'focus'
-	| 'home'
-	| 'lightBulb'
-	| 'maximize'
-	| 'microchip'
-	| 'minimize'
-	| 'power'
-	| 'zoomOut'
-	| 'zoomIn'
-);
+type IconName = typeof IconNames[number];
 
 //	Declare icon list type
 type IconList = {
-	readonly [key in IconName]		: any;
+	readonly [key: string]		: any;
 };
 
 //	Declare helper function prop type

@@ -75,8 +75,17 @@ const ButtonLabel = styled(
 	},
 );
 
+//	Declare button link styling
+const ButtonLink = styled(
+	'a',
+	{
+		textDecoration		: 'none',
+	},
+);
+
 //	Exports
 export {
 	ButtonContainer,
 	ButtonLabel,
+	ButtonLink,
 };

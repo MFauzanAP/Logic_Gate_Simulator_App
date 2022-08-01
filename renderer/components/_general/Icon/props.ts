@@ -50,7 +50,7 @@ interface IconProps extends ComponentProps {
 	/**
 	 * Some icons use this to set their color
 	 * 
-	 * Must be passed in as a color code
+	 * ! **NOTE** Must be passed in as a color code!
 	 * 
 	 * @example
 	 * #000000
