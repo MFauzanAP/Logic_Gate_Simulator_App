@@ -1,7 +1,7 @@
 //	Package Imports
 import React from 'react';
-import Button, { PrimaryButton } from '@/components/_general/Button';
-import Icon from '@/components/_general/Icon';
+import Button, { PrimaryButton } from '@/components/Button';
+import Icon from '@/components/Icon';
 
 //	Declare home page component
 const Home = () => {

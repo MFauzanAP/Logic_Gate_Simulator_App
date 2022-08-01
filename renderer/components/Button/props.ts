@@ -1,7 +1,7 @@
 //	Type Imports
 import type { CSS } from '@/themes';
 import type { ReactNode } from 'react';
-import type { IconName } from '@/components/_general/Icon';
+import type { IconName } from '@/components/Icon';
 import type { ComponentProps } from '@/types';
 
 //	Declare component props

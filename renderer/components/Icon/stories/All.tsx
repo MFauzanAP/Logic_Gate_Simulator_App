@@ -56,7 +56,7 @@ You can set the button icon through the \`name\` prop
 			language			: 'jsx',
 			code				: `
 //	Component Imports
-import Icon from '@/components/_general/Icon';
+import Icon from '@/components/Icon';
 
 ...
 

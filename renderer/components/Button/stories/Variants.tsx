@@ -38,7 +38,7 @@ which is chosen by importing the desired variation.
 			language			: 'jsx',
 			code				: `
 //	Component Imports
-import Button, { PrimaryButton, SecondaryButton } from '@/components/_general/Button';
+import Button, { PrimaryButton, SecondaryButton } from '@/components/Button';
 
 ...
 

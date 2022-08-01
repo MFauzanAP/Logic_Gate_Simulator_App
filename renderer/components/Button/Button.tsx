@@ -2,7 +2,7 @@
 import React from 'react';
 
 //	Component Imports
-import Icon from '@/components/_general/Icon';
+import Icon from '@/components/Icon';
 
 //	Helper Imports
 import { composeButtonLabel } from './helpers';

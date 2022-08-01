@@ -19,7 +19,7 @@ Disabled.parameters = {
 			language			: 'jsx',
 			code				: `
 //	Component Imports
-import Button, { DisabledButton } from '@/components/_general/Button';
+import Button, { DisabledButton } from '@/components/Button';
 
 ...
 

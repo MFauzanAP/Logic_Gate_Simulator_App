@@ -2,7 +2,7 @@
 import Button from '../Button';
 
 //	Constant Imports
-import { IconNames } from '@/components/_general/Icon/constants';
+import { IconNames } from '@/components/Icon/constants';
 
 //	Type Imports
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
