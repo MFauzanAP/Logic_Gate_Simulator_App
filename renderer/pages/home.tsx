@@ -15,17 +15,18 @@ const Home = () => {
 				as				= {'a'}
 				label			= {'Done'}
 				endIcon			= {'checkmark'}
-				endIconCss		= {{
-					stroke			: '$text600',
+				endIconProps	= {{
+					name			: 'checkmark',
+					color			: '$text600',
 				}}
 			/>
-			<PrimaryButton as={'a'} shape={'pill'} />
+			<PrimaryButton shape={'pill'} />
 			<Button
 				css				= {{ width: 50, height: 40, gradient: '$linear200' }}
 				label			= {''}
 				startIcon		= {'home'}
-				//	@ts-ignore
 				startIconProps	= {{
+					name			: 'home',
 					color			: '$text100',
 					width			: '$space4',
 					height			: '$space4',
