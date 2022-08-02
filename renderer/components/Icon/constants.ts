@@ -18,19 +18,19 @@ import type { IconList } from './types';
 
 //	Declare list of icons
 const Icons: IconList = {
-	ampersand,
-	checkmark,
-	chevron,
-	close,
-	focus,
-	home,
-	lightBulb,
-	maximize,
-	microchip,
-	minimize,
-	power,
-	zoomOut,
-	zoomIn,
+	ampersand		: { icon: ampersand, type: 'filled' },
+	checkmark		: { icon: checkmark, type: 'lined' },
+	chevron			: { icon: chevron, type: 'lined' },
+	close			: { icon: close, type: 'lined' },
+	focus			: { icon: focus, type: 'lined' },
+	home			: { icon: home, type: 'filled' },
+	lightBulb		: { icon: lightBulb, type: 'filled' },
+	maximize		: { icon: maximize, type: 'lined' },
+	microchip		: { icon: microchip, type: 'filled' },
+	minimize		: { icon: minimize, type: 'lined' },
+	power			: { icon: power, type: 'filled' },
+	zoomOut			: { icon: zoomOut, type: 'lined' },
+	zoomIn			: { icon: zoomIn, type: 'lined' },
 };
 
 //	Declare icon names

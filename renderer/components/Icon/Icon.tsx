@@ -24,8 +24,7 @@ const Icon = ({
 	height,
 	size,
 	rotation,
-	fill,
-	stroke,
+	color,
 	thickness,
 	linecap,
 	css,
@@ -33,16 +32,16 @@ const Icon = ({
 }: Props) => {
 
 	//	Extract icon component
-	const IconElement = styled(Icons[name]);
+	const IconElement = styled(Icons[name].icon);
 
 	//	Compose css
 	const finalCss = composeIconCss({
+		name,
 		width,
 		height,
 		size,
 		rotation,
-		fill,
-		stroke,
+		color,
 		thickness,
 		linecap,
 		css,
@@ -57,8 +56,7 @@ const Icon = ({
 Icon.defaultProps = {
 	rotation	: 0,
 	size		: '$space4',
-	fill		: 'inherit',
-	stroke		: 'inherit',
+	color		: 'inherit',
 	thickness	: 2,
 	linecap		: 'round',
 };

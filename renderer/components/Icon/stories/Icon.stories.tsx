@@ -15,8 +15,7 @@ const Meta: ComponentMeta<typeof Icon> = {
 		name			: 'close',
 		size			: '$space4',
 		rotation		: 0,
-		fill			: '#000000',
-		stroke			: '#000000',
+		color			: '#000000',
 		thickness		: 2,
 		linecap			: 'round',
 	},
@@ -52,13 +51,7 @@ const Meta: ComponentMeta<typeof Icon> = {
 				category		: 'Appearance',
 			},
 		},
-		fill			: {
-			control			: { type: 'color' },
-			table			: {
-				category		: 'Appearance',
-			},
-		},
-		stroke			: {
+		color			: {
 			control			: { type: 'color' },
 			table			: {
 				category		: 'Appearance',

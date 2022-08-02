@@ -36,7 +36,7 @@ interface IconProps extends ComponentProps {
 	size?			: number | string,
 
 	/**
-	 * Some icons use this to set their color.
+	 * Used to set the color of the icon
 	 * 
 	 * ! **NOTE** Must be passed in as a color code!
 	 * 
@@ -45,19 +45,7 @@ interface IconProps extends ComponentProps {
 	 * 
 	 * @type {string}
 	 * */
-	fill?			: string,
-
-	/**
-	 * Some icons use this to set their color
-	 * 
-	 * ! **NOTE** Must be passed in as a color code!
-	 * 
-	 * @example
-	 * #000000
-	 * 
-	 * @type {string}
-	 * */
-	stroke?			: string,
+	color?			: string,
 
 	/**
 	 * Sets the thickness of the icon
@@ -70,6 +58,8 @@ interface IconProps extends ComponentProps {
 
 	/**
 	 * Determines what the end of lines should look like 
+	 * 
+	 * ! **NOTE** only works for lined icons!
 	 * 
 	 * @type {'butt' | 'round' | 'square'}
 	 * */

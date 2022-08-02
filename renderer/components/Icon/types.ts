@@ -9,11 +9,21 @@ type IconName = typeof IconNames[number];
 
 //	Declare icon list type
 type IconList = {
-	readonly [key: string]		: any;
+	readonly [key: string]	: {
+		icon					: any,
+		type					: 'lined' | 'filled',
+	};
 };
 
 //	Declare helper function prop type
 type HelperFunctionProps = {
+	/**
+	 * Which icon should be displayed?
+	 * 
+	 * @type {IconName}
+	 * */
+	name			: IconName,
+
 	/**
 	 * How wide should the icon be?
 	 *
@@ -38,44 +48,34 @@ type HelperFunctionProps = {
 	size			: number | string,
 
 	/**
-	 * Some icons use this to set their color.
-	 *
+	 * Used to set the color of the icon
+	 * 
 	 * ! **NOTE** Must be passed in as a color code!
-	 *
+	 * 
 	 * @example
 	 * #000000
-	 *
+	 * 
 	 * @type {string}
 	 * */
-	fill			: string,
+	color?			: string,
 
 	/**
-	 * Some icons use this to set their color
-	 *
-	 * Must be passed in as a color code
-	 *
-	 * @example
-	 * #000000
-	 *
-	 * @type {string}
-	 * */
-	stroke			: string,
+	  * Sets the thickness of the icon
+	  * 
+	  * ! **NOTE** only works for lined icons!
+	  * 
+	  * @type {number}
+	  * */
+	thickness?		: number,
 
 	/**
-	 * Sets the thickness of the icon
-	 *
-	 * ! **NOTE** only works for lined icons!
-	 *
-	 * @type {number}
-	 * */
-	thickness		: number,
-
-	/**
-	 * Determines what the end of lines should look like
-	 *
-	 * @type {'butt' | 'round' | 'square'}
-	 * */
-	linecap		: 'butt' | 'round' | 'square',
+	  * Determines what the end of lines should look like 
+	  * 
+	  * ! **NOTE** only works for lined icons!
+	  * 
+	  * @type {'butt' | 'round' | 'square'}
+	  * */
+	linecap?		: 'butt' | 'round' | 'square',
 
 	/**
 	 * Sets the rotation of the icon

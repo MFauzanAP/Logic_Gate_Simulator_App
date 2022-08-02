@@ -34,7 +34,7 @@ const All = () => (
 			>
 
 				{/* Icon */}
-				<Icon name={iconName} fill={'#000'} stroke={'#000'} />
+				<Icon name={iconName} color={'#000'} />
 
 				{/* Name */}
 				<Description>{iconName}</Description>
