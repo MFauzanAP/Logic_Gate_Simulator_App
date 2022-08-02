@@ -3,9 +3,6 @@ import React from 'react';
 import Button, { PrimaryButton } from '@/components/Button';
 import Icon from '@/components/Icon';
 
-//	Style Imports
-import { DarkTheme } from '@/themes';
-
 //	Declare home page component
 //	eslint-disable-next-line require-jsdoc
 const Home = () => {
@@ -27,20 +24,15 @@ const Home = () => {
 				css				= {{ width: 50, height: 40, gradient: '$linear200' }}
 				label			= {''}
 				startIcon		= {'home'}
-				startIconCss	= {{
+				//	@ts-ignore
+				startIconProps	= {{
+					color			: '$text100',
 					width			: '$space4',
 					height			: '$space4',
-
-					fill			: '$text100',
-					strokeWidth		: 0,
-
-					[`.${DarkTheme} &`]	: {
-						fill				: '$text600',
-					},
 				}}
 			/>
 
-			<Icon name={'chevron'} size={'$space16'} thickness={2} fill={'none'} stroke={'$text600'} />
+			<Icon name={'chevron'} size={'$space16'} thickness={2} color={'$text600'} />
 
 		</>
 	);

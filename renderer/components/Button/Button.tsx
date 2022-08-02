@@ -39,13 +39,13 @@ const Button = ({
 		<>
 
 			{/* Start Icon */}
-			{startIcon && <Icon name={startIcon} size={'$space2'} thickness={2} {...startIconProps} />}
+			{startIcon && <Icon name={startIcon} size={'$space2'} thickness={2} color={disabled ? '$text200' : undefined} {...startIconProps} />}
 
 			{/* Label */}
 			{buttonLabel !== '' && <ButtonLabel disabled={disabled} {...labelProps}>{buttonLabel}</ButtonLabel>}
 
 			{/* End Icon */}
-			{endIcon && <Icon name={endIcon} size={'$space2'} thickness={2} {...endIconProps} />}
+			{endIcon && <Icon name={endIcon} size={'$space2'} thickness={2} color={disabled ? '$text200' : undefined} {...endIconProps} />}
 
 		</>
 	);
