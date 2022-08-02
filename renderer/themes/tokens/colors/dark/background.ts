@@ -4,9 +4,9 @@ import type { ColorsDictionary } from '@/types';
 //	Declare background colors
 const backgroundColors: ColorsDictionary = {
 	background100		: '#000000',
-	background200		: '#262633',
-	background300		: '#323244',
-	background400		: '#40405A',
+	background200		: '#25252C',
+	background300		: '#2F2E38',
+	background400		: '#393847',
 	background700		: '#FFFFFF',
 };
 

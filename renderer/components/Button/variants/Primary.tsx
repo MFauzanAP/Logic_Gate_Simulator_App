@@ -1,6 +1,9 @@
 //	Component Imports
 import Button from '../Button';
 
+//	Style Imports
+import { DarkTheme } from '@/themes';
+
 //	Type Imports
 import type ButtonProps from '../props';
 
@@ -17,9 +20,19 @@ const Primary = (props: ButtonProps) => (
 		css			= {{
 			backgroundColor	: '$purple400',
 			stroke			: '$text100',
+			fill			: '$text100',
+
+			[`.${DarkTheme} &`]	: {
+				stroke			: '$text600',
+				fill			: '$text600',
+			},
 		}}
 		labelCss	= {{
 			color			: '$text100',
+
+			[`.${DarkTheme} &`]	: {
+				color			: '$text600',
+			},
 		}}
 		{...props}
 	/>

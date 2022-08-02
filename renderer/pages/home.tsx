@@ -3,7 +3,11 @@ import React from 'react';
 import Button, { PrimaryButton } from '@/components/Button';
 import Icon from '@/components/Icon';
 
+//	Style Imports
+import { DarkTheme } from '@/themes';
+
 //	Declare home page component
+//	eslint-disable-next-line require-jsdoc
 const Home = () => {
 
 	//	Return page
@@ -29,6 +33,10 @@ const Home = () => {
 
 					fill			: '$text100',
 					strokeWidth		: 0,
+
+					[`.${DarkTheme} &`]	: {
+						fill				: '$text600',
+					},
 				}}
 			/>
 
