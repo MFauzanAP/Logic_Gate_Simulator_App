@@ -17,11 +17,20 @@ const Secondary = (props: ButtonProps) => (
 		css			= {{
 			backgroundColor	: '$background100',
 			border			: '2px solid $purple400',
-			stroke			: '$purple400',
 		}}
-		labelCss	= {{
-			color			: '$purple400',
-			fontWeight		: '700',
+		labelProps	= {{
+			css				: {
+				color			: '$purple400',
+				fontWeight		: '700',
+			},
+		}}
+		//	@ts-ignore
+		startIconProps	= {{
+			color				: '$purple400',
+		}}
+		//	@ts-ignore
+		endIconProps	= {{
+			color				: '$purple400',
 		}}
 		{...props}
 	/>

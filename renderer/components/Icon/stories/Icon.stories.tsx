@@ -45,12 +45,6 @@ const Meta: ComponentMeta<typeof Icon> = {
 				category		: 'Appearance',
 			},
 		},
-		rotation		: {
-			control			: { type: 'number' },
-			table			: {
-				category		: 'Appearance',
-			},
-		},
 		color			: {
 			control			: { type: 'color' },
 			table			: {
@@ -72,6 +66,13 @@ const Meta: ComponentMeta<typeof Icon> = {
 		css				: {
 			table			: {
 				category		: 'Appearance',
+			},
+		},
+
+		rotation		: {
+			control			: { type: 'number' },
+			table			: {
+				category		: 'Properties',
 			},
 		},
 

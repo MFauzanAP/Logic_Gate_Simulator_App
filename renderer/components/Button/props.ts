@@ -1,7 +1,5 @@
 //	Type Imports
-import type { CSS } from '@/themes';
-import type { ReactNode } from 'react';
-import type { IconName } from '@/components/Icon';
+import type { IconName, IconProps } from '@/components/Icon';
 import type { ComponentProps } from '@/types';
 
 //	Declare component props
@@ -50,10 +48,10 @@ interface ButtonProps extends ComponentProps {
 	/**
 	 * What icon should be displayed at the start?
 	 *
-	 * @type {IconName & ReactNode}
+	 * @type {IconName}
 	 * @default null
 	 * */
-	startIcon?		: IconName & ReactNode,
+	startIcon?		: IconName,
 
 	/**
 	 * What icon should be displayed at the end?
@@ -61,39 +59,31 @@ interface ButtonProps extends ComponentProps {
 	 * @type {IconName & ReactNode}
 	 * @default null
 	 * */
-	endIcon?		: IconName & ReactNode,
+	endIcon?		: IconName,
 
 	/**
-	 * Changes the main container's CSS
+	 * Passes these props to label component
 	 *
-	 * @type {CSS}
+	 * @type {ComponentProps}
 	 * @default null
 	 * */
-	css?			: CSS,
+	labelProps?		: ComponentProps,
 
 	/**
-	 * Changes the button label's CSS
+	 * Passes these props to start icon component
 	 *
-	 * @type {CSS}
+	 * @type {IconProps}
 	 * @default null
 	 * */
-	labelCss?		: CSS,
+	startIconProps?	: IconProps,
 
 	/**
-	 * Changes the start icon's CSS
+	 * Passes these props to end icon component
 	 *
-	 * @type {CSS}
+	 * @type {IconProps}
 	 * @default null
 	 * */
-	startIconCss?	: CSS,
-
-	/**
-	 * Changes the end icon's CSS
-	 *
-	 * @type {CSS}
-	 * @default null
-	 * */
-	endIconCss?		: CSS,
+	endIconProps?	: IconProps,
 
 	/**
 	 * Function called when the button is clicked

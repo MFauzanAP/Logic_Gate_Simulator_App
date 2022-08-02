@@ -1,5 +1,4 @@
 //	Type Imports
-import type { CSS } from '@/themes';
 import type { IconName } from './types';
 import type { ComponentProps } from '@/types';
 
@@ -71,13 +70,6 @@ interface IconProps extends ComponentProps {
 	 * @type {number}
 	 * */
 	rotation?		: number,
-
-	/** 
-	 * Changes the icon's CSS 
-	 * 
-	 * @type {CSS}
-	 * */
-	css?			: CSS,
 }
 
 //	Exports

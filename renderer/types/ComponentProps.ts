@@ -1,4 +1,5 @@
 //	Type Imports
+import type { CSS } from '@/themes';
 import type { ComponentChildren } from '@/types';
 import type { IntrinsicElementsKeys } from '@stitches/react/types/styled-component';
 
@@ -15,6 +16,14 @@ interface ComponentProps {
 	 * @type {IntrinsicElement}
 	 */
 	as?				: IntrinsicElementsKeys,
+
+	/**
+	 * Changes the main container's CSS
+	 *
+	 * @type {CSS}
+	 * @default null
+	 * */
+	css?			: CSS,
 
 	/**
 	 * The component's children.

@@ -16,23 +16,26 @@ import type ButtonProps from '../props';
  */
 const Primary = (props: ButtonProps) => (
 	<Button
-		shape		= {'pill'}
-		css			= {{
+		shape			= {'pill'}
+		css				= {{
 			backgroundColor	: '$purple400',
-			stroke			: '$text100',
-			fill			: '$text100',
+		}}
+		labelProps		= {{
+			css				: {
+				color			: '$text100',
 
-			[`.${DarkTheme} &`]	: {
-				stroke			: '$text600',
-				fill			: '$text600',
+				[`.${DarkTheme} &`]	: {
+					color			: '$text600',
+				},
 			},
 		}}
-		labelCss	= {{
-			color			: '$text100',
-
-			[`.${DarkTheme} &`]	: {
-				color			: '$text600',
-			},
+		//	@ts-ignore
+		startIconProps	= {{
+			color				: '$text100',
+		}}
+		//	@ts-ignore
+		endIconProps	= {{
+			color				: '$text100',
 		}}
 		{...props}
 	/>

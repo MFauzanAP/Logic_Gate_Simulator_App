@@ -32,40 +32,13 @@ const Meta: ComponentMeta<typeof Button> = {
 				category		: 'Appearance',
 			},
 		},
-		disabled		: {
-			control			: { type: 'boolean' },
-			table			: {
-				category		: 'Appearance',
-			},
-		},
 		css				: {
-			table			: {
-				category		: 'Appearance',
-			},
-		},
-		labelCss		: {
-			table			: {
-				category		: 'Appearance',
-			},
-		},
-		startIconCss	: {
-			table			: {
-				category		: 'Appearance',
-			},
-		},
-		endIconCss		: {
 			table			: {
 				category		: 'Appearance',
 			},
 		},
 
 		label			: {
-			table			: {
-				category		: 'Content',
-			},
-		},
-		href			: {
-			control			: { type: 'text' },
 			table			: {
 				category		: 'Content',
 			},
@@ -95,6 +68,35 @@ const Meta: ComponentMeta<typeof Button> = {
 			control			: false,
 			table			: {
 				category		: 'Events',
+			},
+		},
+
+		disabled		: {
+			control			: { type: 'boolean' },
+			table			: {
+				category		: 'Properties',
+			},
+		},
+
+		href			: {
+			control			: { type: 'text' },
+			table			: {
+				category		: 'Miscellaneous',
+			},
+		},
+		labelProps		: {
+			table			: {
+				category		: 'Miscellaneous',
+			},
+		},
+		startIconProps	: {
+			table			: {
+				category		: 'Miscellaneous',
+			},
+		},
+		endIconProps	: {
+			table			: {
+				category		: 'Miscellaneous',
 			},
 		},
 	},

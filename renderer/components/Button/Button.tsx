@@ -25,9 +25,9 @@ const Button = ({
 	startIcon,
 	endIcon,
 	children,
-	labelCss,
-	startIconCss,
-	endIconCss,
+	labelProps,
+	startIconProps,
+	endIconProps,
 	...props
 }: Props) => {
 
@@ -39,15 +39,13 @@ const Button = ({
 		<>
 
 			{/* Start Icon */}
-			{startIcon !== undefined && typeof startIcon !== 'string' && React.cloneElement(startIcon as any, startIconCss && { css: startIconCss })}
-			{typeof startIcon === 'string' && <Icon name={startIcon} size={'$space2'} thickness={2} css={startIconCss} />}
+			{startIcon && <Icon name={startIcon} size={'$space2'} thickness={2} {...startIconProps} />}
 
 			{/* Label */}
-			{buttonLabel !== '' && <ButtonLabel css={labelCss} disabled={disabled}>{buttonLabel}</ButtonLabel>}
+			{buttonLabel !== '' && <ButtonLabel disabled={disabled} {...labelProps}>{buttonLabel}</ButtonLabel>}
 
 			{/* End Icon */}
-			{endIcon !== undefined && typeof endIcon !== 'string' && React.cloneElement(endIcon as any, endIconCss && { css: endIconCss })}
-			{typeof endIcon === 'string' && <Icon name={endIcon} size={'$space2'} thickness={2} css={endIconCss} />}
+			{endIcon && <Icon name={endIcon} size={'$space2'} thickness={2} {...endIconProps} />}
 
 		</>
 	);
@@ -67,8 +65,6 @@ Button.defaultProps = {
 	label			: 'Button',
 	disabled		: false,
 	shape			: 'block',
-	startIconCss	: undefined,
-	endIconCss		: undefined,
 };
 
 //  Exports
