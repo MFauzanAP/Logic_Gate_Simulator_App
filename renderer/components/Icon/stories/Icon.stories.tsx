@@ -14,10 +14,11 @@ const Meta: ComponentMeta<typeof Icon> = {
 	args			: {
 		name			: 'close',
 		size			: '$space4',
-		rotation		: 0,
 		color			: '#000000',
 		thickness		: 2,
 		linecap			: 'round',
+		rotation		: 0,
+		opacity			: 1,
 	},
 	argTypes		: {
 		name			: {
@@ -71,6 +72,17 @@ const Meta: ComponentMeta<typeof Icon> = {
 
 		rotation		: {
 			control			: { type: 'number' },
+			table			: {
+				category		: 'Properties',
+			},
+		},
+		opacity		: {
+			control			: {
+				type			: 'number',
+				min				: 0,
+				max				: 1,
+				step			: 0.1,
+			},
 			table			: {
 				category		: 'Properties',
 			},

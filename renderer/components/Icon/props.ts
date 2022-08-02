@@ -70,6 +70,15 @@ interface IconProps extends ComponentProps {
 	 * @type {number}
 	 * */
 	rotation?		: number,
+
+	/** 
+	 * Sets the opacity of the icon 
+	 * 
+	 * Ranges from 0 to 1
+	 * 
+	 * @type {number}
+	 * */
+	opacity?		: number,
 }
 
 //	Exports

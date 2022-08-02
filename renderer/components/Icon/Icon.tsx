@@ -23,10 +23,11 @@ const Icon = ({
 	width,
 	height,
 	size,
-	rotation,
 	color,
 	thickness,
 	linecap,
+	rotation,
+	opacity,
 	css,
 	...props
 }: Props) => {
@@ -40,10 +41,11 @@ const Icon = ({
 		width,
 		height,
 		size,
-		rotation,
 		color,
 		thickness,
 		linecap,
+		rotation,
+		opacity,
 		css,
 	});
 
@@ -59,6 +61,7 @@ Icon.defaultProps = {
 	color		: 'inherit',
 	thickness	: 2,
 	linecap		: 'round',
+	opacity		: 1,
 };
 
 //  Exports

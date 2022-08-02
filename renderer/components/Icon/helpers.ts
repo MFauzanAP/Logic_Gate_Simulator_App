@@ -26,10 +26,11 @@ const composeIconCss = ({
 	width,
 	height,
 	size,
-	rotation,
 	color,
 	thickness,
 	linecap,
+	rotation,
+	opacity,
 	css,
 }: HelperFunctionProps) => {
 
@@ -45,6 +46,7 @@ const composeIconCss = ({
 		height			: height || size,
 		fill			: iconType === 'filled' ? color : undefined,
 		stroke			: iconType === 'lined' ? color : undefined,
+		opacity,
 		...(css || {}),
 	};
 

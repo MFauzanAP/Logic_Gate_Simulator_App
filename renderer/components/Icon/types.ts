@@ -84,6 +84,15 @@ type HelperFunctionProps = {
 	 * */
 	rotation		: number,
 
+	/** 
+	 * Sets the opacity of the icon 
+	 * 
+	 * Ranges from 0 to 1
+	 * 
+	 * @type {number}
+	 * */
+	opacity		: number,
+
 	/**
 	 * Changes the icon's CSS
 	 *
