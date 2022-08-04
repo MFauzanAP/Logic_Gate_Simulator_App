@@ -36,6 +36,7 @@ module.exports = {
 		'react/jsx-props-no-spreading': 'off',
 		'react/jsx-no-useless-fragment': 'off',
 		'react/jsx-closing-tag-location': 'off',
+		'react/jsx-props-no-multi-spaces': 'off',
 		'import/no-extraneous-dependencies': 'off',
 		'react/jsx-one-expression-per-line': 'off',
 		'padded-blocks': [ 'error', 'always' ],

@@ -15,14 +15,23 @@ type IconList = {
 	};
 };
 
-//	Declare helper function prop type
-type HelperFunctionProps = {
+//	Declare compose icon css prop type
+type ComposeIconCssProps = {
 	/**
 	 * Which icon should be displayed?
 	 * 
 	 * @type {IconName}
 	 * */
 	name			: IconName,
+
+	/**
+	 * Is the button disabled?
+	 * 
+	 * A disabled button cannot be clicked and will have a greyed out appearance
+	 * 
+	 * @type {boolean}
+	 * */
+	disabled		: boolean,
 
 	/**
 	 * How wide should the icon be?
@@ -57,7 +66,7 @@ type HelperFunctionProps = {
 	 * 
 	 * @type {string}
 	 * */
-	color?			: string,
+	color			: string,
 
 	/**
 	  * Sets the thickness of the icon
@@ -66,7 +75,7 @@ type HelperFunctionProps = {
 	  * 
 	  * @type {number}
 	  * */
-	thickness?		: number,
+	thickness		: number,
 
 	/**
 	  * Determines what the end of lines should look like 
@@ -75,7 +84,7 @@ type HelperFunctionProps = {
 	  * 
 	  * @type {'butt' | 'round' | 'square'}
 	  * */
-	linecap?		: 'butt' | 'round' | 'square',
+	linecap			: 'butt' | 'round' | 'square',
 
 	/**
 	 * Sets the rotation of the icon
@@ -91,19 +100,19 @@ type HelperFunctionProps = {
 	 * 
 	 * @type {number}
 	 * */
-	opacity		: number,
+	opacity			: number,
 
 	/**
 	 * Changes the icon's CSS
 	 *
 	 * @type {CSS}
 	 * */
-	css?			: CSS,
+	css				: CSS,
 };
 
 //	Exports
 export type {
 	IconName,
 	IconList,
-	HelperFunctionProps,
+	ComposeIconCssProps,
 };

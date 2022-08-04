@@ -1,10 +1,13 @@
+//	Package Imports
+import { motion } from 'framer-motion';
+
 //	Style Imports
 import { styled } from '@/themes';
 import { clickable, flexContainer } from '@/styles';
 
 //	Declare button container styling
 const ButtonContainer = styled(
-	'button',
+	motion.button,
 	clickable,
 	flexContainer,
 	{
@@ -16,6 +19,7 @@ const ButtonContainer = styled(
 		flexGrow			: 0,
 		gap					: '$space2',
 
+		color				: '$text600',
 		backgroundColor		: '$background200',
 		border				: 'none',
 
@@ -24,9 +28,15 @@ const ButtonContainer = styled(
 		variants			: {
 			disabled			: {
 				true				: {
-					cursor				: 'default',
+					'&&&'				: {
+						pointerEvents		: 'none',
+						cursor				: 'default',
 
-					backgroundColor		: '$background200',
+						color				: '$text200',
+						backgroundColor		: '$background200',
+						backgroundImage		: 'none',
+						border				: 'none',
+					},
 				},
 			},
 
@@ -51,11 +61,11 @@ const ButtonContainer = styled(
 
 //	Declare button label styling
 const ButtonLabel = styled(
-	'p',
+	motion.p,
 	{
 		margin				: 0,
 
-		color				: '$text600',
+		color				: 'inherit',
 
 		typeface			: '$button100',
 		textDecoration		: 'none',
@@ -63,9 +73,9 @@ const ButtonLabel = styled(
 		variants			: {
 			disabled			: {
 				true				: {
-					color				: '$text200',
-
-					fontWeight			: '500',
+					'&&&'				: {
+						fontWeight			: '500',
+					},
 				},
 			},
 		},
@@ -74,7 +84,7 @@ const ButtonLabel = styled(
 
 //	Declare button link styling
 const ButtonLink = styled(
-	'a',
+	motion.a,
 	{
 		textDecoration		: 'none',
 	},

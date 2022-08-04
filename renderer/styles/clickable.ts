@@ -8,5 +8,5 @@ const clickable = css({
 
 //	Exports
 export {
-	clickable
+	clickable,
 };

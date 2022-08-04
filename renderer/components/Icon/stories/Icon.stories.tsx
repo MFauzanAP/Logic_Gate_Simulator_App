@@ -21,6 +21,8 @@ const Meta: ComponentMeta<typeof Icon> = {
 		opacity			: 1,
 	},
 	argTypes		: {
+
+		/* Content */
 		name			: {
 			options			: IconNames,
 			table			: {
@@ -28,6 +30,7 @@ const Meta: ComponentMeta<typeof Icon> = {
 			},
 		},
 
+		/* Appearance */
 		width			: {
 			control			: { type: 'text' },
 			table			: {
@@ -70,6 +73,13 @@ const Meta: ComponentMeta<typeof Icon> = {
 			},
 		},
 
+		/* Properties */
+		disabled		: {
+			control			: { type: 'boolean' },
+			table			: {
+				category		: 'Properties',
+			},
+		},
 		rotation		: {
 			control			: { type: 'number' },
 			table			: {
@@ -88,6 +98,7 @@ const Meta: ComponentMeta<typeof Icon> = {
 			},
 		},
 
+		/* Disable */
 		as				: {
 			table			: {
 				disable			: true,

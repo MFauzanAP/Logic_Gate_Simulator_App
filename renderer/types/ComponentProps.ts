@@ -15,7 +15,7 @@ interface ComponentProps {
 	 * 
 	 * @type {IntrinsicElement}
 	 */
-	as?				: IntrinsicElementsKeys,
+	as?				: IntrinsicElementsKeys | any,
 
 	/**
 	 * Changes the main container's CSS

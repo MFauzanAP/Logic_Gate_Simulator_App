@@ -18,6 +18,8 @@ const Meta: ComponentMeta<typeof Button> = {
 		disabled		: false,
 	},
 	argTypes		: {
+
+		/* Appearance */
 		as				: {
 			options			: [ 'button', 'a' ],
 			control			: { type: 'select' },
@@ -38,6 +40,7 @@ const Meta: ComponentMeta<typeof Button> = {
 			},
 		},
 
+		/* Content */
 		label			: {
 			table			: {
 				category		: 'Content',
@@ -64,6 +67,7 @@ const Meta: ComponentMeta<typeof Button> = {
 			},
 		},
 
+		/* Events */
 		onClick			: {
 			control			: false,
 			table			: {
@@ -71,6 +75,7 @@ const Meta: ComponentMeta<typeof Button> = {
 			},
 		},
 
+		/* Properties */
 		disabled		: {
 			control			: { type: 'boolean' },
 			table			: {
@@ -78,6 +83,7 @@ const Meta: ComponentMeta<typeof Button> = {
 			},
 		},
 
+		/* Miscellaneous */
 		href			: {
 			control			: { type: 'text' },
 			table			: {

@@ -1,8 +1,9 @@
 //	Type Imports
+import type { MutableRefObject } from 'react';
 import type { ComponentChildren } from '@/types';
 
-//	Declare helper function prop type
-type HelperFunctionProps = {
+//	Declare compose button label prop type
+type ComposeButtonLabelProps = {
 	/**
 	 * The button label in text form
 	 * 
@@ -18,7 +19,18 @@ type HelperFunctionProps = {
 	children	: ComponentChildren,
 };
 
+//	Declare compose icon color prop type
+type ComposeIconColorProps = {
+	/**
+	 * Reference to the button component
+	 * 
+	 * @type {MutableRefObject}
+	 */
+	ref			: MutableRefObject<HTMLButtonElement>,
+};
+
 //	Exports
 export type {
-	HelperFunctionProps,
+	ComposeButtonLabelProps,
+	ComposeIconColorProps,
 };

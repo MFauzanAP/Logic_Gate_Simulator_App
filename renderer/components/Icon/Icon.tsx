@@ -20,6 +20,7 @@ import type Props from './props';
  */
 const Icon = ({
 	name,
+	disabled,
 	width,
 	height,
 	size,
@@ -38,6 +39,7 @@ const Icon = ({
 	//	Compose css
 	const finalCss = composeIconCss({
 		name,
+		disabled,
 		width,
 		height,
 		size,

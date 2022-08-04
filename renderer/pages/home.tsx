@@ -1,11 +1,13 @@
 //	Package Imports
-import React from 'react';
-import Button, { PrimaryButton } from '@/components/Button';
+import React, { useState } from 'react';
+import Button, { PrimaryButton, SecondaryButton } from '@/components/Button';
 import Icon from '@/components/Icon';
 
 //	Declare home page component
 //	eslint-disable-next-line require-jsdoc
 const Home = () => {
+
+	const [disabled, setDisabled] = useState(false);
 
 	//	Return page
 	return (
@@ -13,15 +15,35 @@ const Home = () => {
 
 			<Button
 				as				= {'a'}
+				css				= {{ backgroundColor: 'red' }}
+				disabled		= {disabled}
+				onClick			= {() => setDisabled(!disabled)}
 				label			= {'Done'}
+				endIcon			= {'minimize'}
+			/>
+			<PrimaryButton
+				css				= {{ my: '$space4' }}
+				disabled		= {disabled}
+				startIcon		= {'close'}
 				endIcon			= {'checkmark'}
 				endIconProps	= {{
 					name			: 'checkmark',
-					color			: '$text600',
+					size			: '$space3',
 				}}
 			/>
-			<PrimaryButton shape={'pill'} />
+			<SecondaryButton
+				css				= {{ my: '$space4' }}
+				disabled		= {disabled}
+				label			= {'Cancel'}
+				endIcon			= {'checkmark'}
+				startIcon		= {'close'}
+				startIconProps	= {{
+					name			: 'close',
+					thickness		: 4,
+				}}
+			/>
 			<Button
+				disabled
 				css				= {{ width: 50, height: 40, gradient: '$linear200' }}
 				label			= {''}
 				startIcon		= {'home'}

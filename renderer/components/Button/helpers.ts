@@ -1,5 +1,5 @@
 //	Type Imports
-import type { HelperFunctionProps } from './types';
+import type { ComposeButtonLabelProps, ComposeIconColorProps } from './types';
 
 /**
  * Composes button content from its children and label props.
@@ -10,7 +10,7 @@ import type { HelperFunctionProps } from './types';
  * @param 	{ComponentChildren}	children	The button label in component children form
  * @returns	{string}						Button content from either the label prop or component children
  */
-const composeButtonLabel = ({ label, children }: HelperFunctionProps) => {
+const composeButtonLabel = ({ label, children }: ComposeButtonLabelProps) => {
 
 	//	Prioritise children over prop
 	if (typeof children === 'string') return children;
@@ -23,7 +23,24 @@ const composeButtonLabel = ({ label, children }: HelperFunctionProps) => {
 
 };
 
+/**
+ * Composes icon color from the computed color property of the button
+ * 
+ * @param 	{MutableRefObject} 	ref		Reference to the button component
+ * @returns	{string}					Icon color as a string
+ */
+const composeIconColor = ({ ref }: ComposeIconColorProps) => {
+
+	//	Make sure this function is called on the client and not on the server
+	if (typeof window === 'undefined') return undefined;
+
+	//	Return computed color
+	return window.getComputedStyle(ref.current).color;
+
+};
+
 //	Exports
 export {
 	composeButtonLabel,
+	composeIconColor,
 };

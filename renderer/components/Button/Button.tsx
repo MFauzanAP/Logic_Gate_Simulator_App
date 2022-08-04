@@ -1,17 +1,18 @@
 //	Package Imports
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 //	Component Imports
 import Icon from '@/components/Icon';
 
 //	Helper Imports
-import { composeButtonLabel } from './helpers';
+import { composeButtonLabel, composeIconColor } from './helpers';
 
 //	Style Imports
 import { ButtonContainer, ButtonLabel, ButtonLink } from './styles';
 
 //	Type Imports
 import type Props from './props';
+import type { MutableRefObject } from 'react';
 
 /**
  * Renders as a `<button>` by default but can be changed to render as an `<a>` via the `as` prop.
@@ -31,30 +32,67 @@ const Button = ({
 	...props
 }: Props) => {
 
-	//	Compose button label
-	const buttonLabel = composeButtonLabel({ label, children });
+	//	Create refs
+	const ref = useRef() as MutableRefObject<HTMLButtonElement>;
+
+	//	Create state variables
+	const [ buttonLabel, setButtonLabel ] = useState('');
+	const [ iconColor, setIconColor ] = useState('');
+
+	//	Function called on load and whenever the label or children changes
+	useEffect(() => {
+
+		//	Compose button label and icon color
+		setButtonLabel(composeButtonLabel({ label, children }));
+		setIconColor(composeIconColor({ ref }));
+
+	}, [ label, children ]);
 
 	//	Declare button content
 	const buttonContent = (
-		<>
+		<ButtonContainer
+			ref			= {ref}
+			type		= {'button'}
+			as			= {typeof as !== 'string' ? as : undefined}
+			disabled	= {disabled}
+			{...props}
+		>
 
 			{/* Start Icon */}
-			{startIcon && <Icon name={startIcon} size={'$space2'} thickness={2} color={disabled ? '$text200' : undefined} {...startIconProps} />}
+			{startIcon && (
+				<Icon
+					name		= {startIcon}
+					size		= {'$space2'}
+					thickness	= {2}
+					disabled	= {disabled}
+					color		= {iconColor}
+					{...startIconProps}
+				/>
+			)}
 
 			{/* Label */}
 			{buttonLabel !== '' && <ButtonLabel disabled={disabled} {...labelProps}>{buttonLabel}</ButtonLabel>}
 
 			{/* End Icon */}
-			{endIcon && <Icon name={endIcon} size={'$space2'} thickness={2} color={disabled ? '$text200' : undefined} {...endIconProps} />}
+			{endIcon && (
+				<Icon
+					name		= {endIcon}
+					size		= {'$space2'}
+					thickness	= {2}
+					disabled	= {disabled}
+					color		= {iconColor}
+					{...endIconProps}
+				/>
+			)}
 
-		</>
+		</ButtonContainer>
 	);
 
 	//	Return component jsx
 	return (
 		as === 'a'
-			? <ButtonLink href={href}><ButtonContainer type={'button'} disabled={disabled} {...props}>{buttonContent}</ButtonContainer></ButtonLink>
-			: <ButtonContainer type={'button'} disabled={disabled} {...props}>{buttonContent}</ButtonContainer>
+			? <ButtonLink href={href}><>{buttonContent}</></ButtonLink>
+			: buttonContent
 	);
 
 };
@@ -64,7 +102,6 @@ Button.defaultProps = {
 	as				: 'button',
 	label			: 'Button',
 	disabled		: false,
-	shape			: 'block',
 };
 
 //  Exports

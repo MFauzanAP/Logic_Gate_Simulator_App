@@ -1,9 +1,10 @@
 //	Type Imports
 import type { IconName, IconProps } from '@/components/Icon';
 import type { ComponentProps } from '@/types';
+import type { MotionProps } from 'framer-motion';
 
 //	Declare component props
-interface ButtonProps extends ComponentProps {
+interface ButtonProps extends ComponentProps, MotionProps {
 	/**
 	 * What element should the button be rendered as?
 	 *
@@ -12,7 +13,7 @@ interface ButtonProps extends ComponentProps {
 	 * @type {'button' | 'a'}
 	 * @default 'button'
 	 * */
-	as?				: 'button' | 'a',
+	as?				: 'button' | 'a' | any,
 
 	/**
 	 * The button's text

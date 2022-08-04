@@ -3,7 +3,7 @@ import { Icons } from './constants';
 
 //	Type Imports
 import type { CSS } from '@/themes';
-import type { HelperFunctionProps } from './types';
+import type { ComposeIconCssProps } from './types';
 
 /**
  * Composes icon css based on the passed parameters
@@ -23,6 +23,7 @@ import type { HelperFunctionProps } from './types';
  */
 const composeIconCss = ({
 	name,
+	disabled,
 	width,
 	height,
 	size,
@@ -32,10 +33,14 @@ const composeIconCss = ({
 	rotation,
 	opacity,
 	css,
-}: HelperFunctionProps) => {
+}: ComposeIconCssProps) => {
 
 	//	Get icon type
 	const iconType = Icons[name].type;
+
+	//	Override color if disabled
+	const finalColor = disabled ? '$text200' : color;
+	console.log(name, disabled, finalColor);
 
 	//	Declare output css
 	const output: CSS = {
@@ -44,8 +49,8 @@ const composeIconCss = ({
 		transform		: `rotate(${rotation}deg)`,
 		width			: width || size,
 		height			: height || size,
-		fill			: iconType === 'filled' ? color : undefined,
-		stroke			: iconType === 'lined' ? color : undefined,
+		fill			: iconType === 'filled' ? finalColor : undefined,
+		stroke			: iconType === 'lined' ? finalColor : undefined,
 		opacity,
 		...(css || {}),
 	};
