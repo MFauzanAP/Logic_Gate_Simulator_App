@@ -7,7 +7,7 @@ import Icon from '@/components/Icon';
 //	eslint-disable-next-line require-jsdoc
 const Home = () => {
 
-	const [disabled, setDisabled] = useState(false);
+	const [ disabled, setDisabled ] = useState(false);
 
 	//	Return page
 	return (

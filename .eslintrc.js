@@ -21,6 +21,7 @@ module.exports = {
 	plugins: [ 'react', '@typescript-eslint' ],
 	rules: {
 		'no-tabs': 'off',
+		'no-shadow': 'off',
 		'key-spacing': 'off',
 		'import/order': 'off',
 		'no-unused-vars': 'off',

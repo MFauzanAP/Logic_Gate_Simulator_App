@@ -7,7 +7,12 @@ import type * as Stitches from '@stitches/react';
 //	Imports
 import gradients from '@/themes/tokens/gradients';
 
-//  Declare function used to apply gradient styles
+/**
+ * Stitches utility function used to apply gradient styles using either tokens or normal declarations
+ * 
+ * @param		{PropertyValue}		value	The value being set as the gradient
+ * @returns		{CSS}						The final computed style of the gradient
+ */
 const gradient = (value: Stitches.PropertyValue<'backgroundImage'>) => validateCSSValue(
 	value as unknown as string,
 	(value: string) => {

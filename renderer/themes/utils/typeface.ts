@@ -8,6 +8,12 @@ import { validateCSSValue } from '@/helpers';
 import typefaces from '@/themes/tokens/typefaces';
 
 //  Declare function used to apply typeface styles
+/**
+ * Stitches utility function that is used to apply font styles from typeface tokens
+ * 
+ * @param		{PropertyValue}		value	The typeface token
+ * @returns		{CSS}						The final computed style
+ */
 const typeface = (token: string) => validateCSSValue(
 	token,
 	(token: string) => {
@@ -15,7 +21,7 @@ const typeface = (token: string) => validateCSSValue(
 		//	Break down token into typeface name and size
 		const name = token.match(TypefaceNameRegex)![0];
 		const size = token.match(TypefaceSizeRegex)![0];
-		
+
 		//	Return typeface based on token
 		return typefaces[name][size];
 
@@ -24,7 +30,7 @@ const typeface = (token: string) => validateCSSValue(
 
 		//	Log errors
 		console.error(error);
-		
+
 		//	If there was an error, return body 300
 		return typefaces.body[300];
 

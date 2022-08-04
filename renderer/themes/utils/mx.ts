@@ -7,7 +7,12 @@ import { validateCSSValue } from '@/helpers';
 //	Type Imports
 import type * as Stitches from '@stitches/react';
 
-//  Declare function used to apply horizontal margin styles
+/**
+ * Stitches utility function which combines margin-left and margin-right properties into one declaration
+ * 
+ * @param		{PropertyValue}		value	The value being set as the horizontal margin
+ * @returns		{CSS}						The final computed style
+ */
 const mx = (value: Stitches.PropertyValue<'margin'>) => validateCSSValue(
 	value as unknown as string,
 	(value: string) => {
