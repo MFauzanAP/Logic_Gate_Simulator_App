@@ -3,7 +3,9 @@
   "name": "Logic_Gate_Simulator_App",
   "description": "Application used to simulate logic gates",
   "version": "1.0.0",
-  "author": "Muhammad Fauzan Aristya Putra",
+  "author": {
+    "name": "Muhammad Fauzan Aristya Putra"
+  },
   "main": "app/background.js",
   "scripts": {
     "dev": "nextron",
@@ -12,7 +14,8 @@
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "test-storybook"
+    "test": "test-storybook",
+    "chromatic": "npx chromatic --project-token=9b04c53a7826"
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
@@ -41,6 +44,7 @@
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.7.3",
     "electron": "^17.1.2",
     "electron-builder": "23.0.2",
     "eslint": "^8.14.0",
@@ -59,5 +63,7 @@
     "react-dom": "^17.0.2",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "^4.6.2"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "Logic_Gate_Simulator_App@1.0.0"
 }

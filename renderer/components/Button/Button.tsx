@@ -19,7 +19,6 @@ import type { MutableRefObject } from 'react';
  * The list of props supported is shown below. Any additional props will be passed to the root container of `<Button>`.
  */
 const Button = ({
-	as,
 	label,
 	href,
 	disabled,
@@ -53,7 +52,7 @@ const Button = ({
 		<ButtonContainer
 			ref			= {ref}
 			type		= {'button'}
-			as			= {typeof as !== 'string' ? as : undefined}
+			round		= {buttonLabel === ''}
 			disabled	= {disabled}
 			{...props}
 		>
@@ -85,12 +84,15 @@ const Button = ({
 				/>
 			)}
 
+			{/* Other Children */}
+			{typeof children !== 'string' && children}
+
 		</ButtonContainer>
 	);
 
 	//	Return component jsx
 	return (
-		as === 'a'
+		href
 			? <ButtonLink href={href}><>{buttonContent}</></ButtonLink>
 			: buttonContent
 	);
@@ -99,7 +101,6 @@ const Button = ({
 
 //	Set default props
 Button.defaultProps = {
-	as				: 'button',
 	label			: 'Button',
 	disabled		: false,
 };

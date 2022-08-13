@@ -32,6 +32,7 @@ module.exports = {
 		'storybook/story-exports': 'off',
 		'react/forbid-prop-types': 'off',
 		'react/jsx-equals-spacing': 'off',
+		'no-promise-executor-return': 'off',
 		'import/prefer-default-export': 'off',
 		'react/jsx-filename-extension': 'off',
 		'react/jsx-props-no-spreading': 'off',
@@ -62,18 +63,6 @@ module.exports = {
 			{
 				ignoreImports: true,
 				ignoreDestructuring: true,
-			},
-		],
-		'require-jsdoc': [
-			'error',
-			{
-				require: {
-					FunctionDeclaration: false,
-					MethodDefinition: false,
-					ClassDeclaration: false,
-					ArrowFunctionExpression: true,
-					FunctionExpression: false,
-				},
 			},
 		],
 		'no-trailing-spaces': [

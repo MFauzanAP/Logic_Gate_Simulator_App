@@ -3,13 +3,11 @@ import React from 'react';
 
 //	Component Imports
 import Icon from '../Icon';
-import { Description } from '@storybook/addon-docs';
 
 //	Constant Imports
 import { IconNames } from '../constants';
 
 //  Declare all icons story
-//	eslint-disable-next-line require-jsdoc
 const All = () => (
 	<div
 		style		= {{
@@ -37,7 +35,7 @@ const All = () => (
 				<Icon name={iconName} color={'#000'} />
 
 				{/* Name */}
-				<Description>{iconName}</Description>
+				<p className={'sbdocs-p'}>{iconName}</p>
 
 			</div>
 		))}

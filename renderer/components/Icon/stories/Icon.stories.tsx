@@ -117,7 +117,6 @@ const Meta: ComponentMeta<typeof Icon> = {
 };
 
 //	Declare overview story
-//	eslint-disable-next-line require-jsdoc
 const Overview: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 
 //	Exports

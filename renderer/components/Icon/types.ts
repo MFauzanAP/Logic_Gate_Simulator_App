@@ -25,15 +25,6 @@ type ComposeIconCssProps = {
 	name			: IconName,
 
 	/**
-	 * Is the button disabled?
-	 * 
-	 * A disabled button cannot be clicked and will have a greyed out appearance
-	 * 
-	 * @type {boolean}
-	 * */
-	disabled		: boolean,
-
-	/**
 	 * How wide should the icon be?
 	 *
 	 * @type {number | string}

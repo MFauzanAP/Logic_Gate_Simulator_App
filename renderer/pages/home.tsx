@@ -4,7 +4,6 @@ import Button, { PrimaryButton, SecondaryButton } from '@/components/Button';
 import Icon from '@/components/Icon';
 
 //	Declare home page component
-//	eslint-disable-next-line require-jsdoc
 const Home = () => {
 
 	const [ disabled, setDisabled ] = useState(false);
@@ -16,20 +15,15 @@ const Home = () => {
 			<Button
 				as				= {'a'}
 				css				= {{ backgroundColor: 'red' }}
-				disabled		= {disabled}
 				onClick			= {() => setDisabled(!disabled)}
 				label			= {'Done'}
 				endIcon			= {'minimize'}
 			/>
 			<PrimaryButton
-				css				= {{ my: '$space4' }}
+				css				= {{ width: '$space9', px: 0, my: '$space4' }}
 				disabled		= {disabled}
 				startIcon		= {'close'}
-				endIcon			= {'checkmark'}
-				endIconProps	= {{
-					name			: 'checkmark',
-					size			: '$space3',
-				}}
+				label			= {''}
 			/>
 			<SecondaryButton
 				css				= {{ my: '$space4' }}

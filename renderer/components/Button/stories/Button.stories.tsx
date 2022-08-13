@@ -12,7 +12,6 @@ const Meta: ComponentMeta<typeof Button> = {
 	title		  	: 'Components/Button',
 	component		: Button,
 	args			: {
-		as				: 'button',
 		label			: 'Button',
 		shape			: 'block',
 		disabled		: false,
@@ -20,13 +19,6 @@ const Meta: ComponentMeta<typeof Button> = {
 	argTypes		: {
 
 		/* Appearance */
-		as				: {
-			options			: [ 'button', 'a' ],
-			control			: { type: 'select' },
-			table			: {
-				category		: 'Appearance',
-			},
-		},
 		shape			: {
 			options			: [ 'block', 'pill' ],
 			control			: { type: 'select' },
@@ -105,6 +97,12 @@ const Meta: ComponentMeta<typeof Button> = {
 				category		: 'Miscellaneous',
 			},
 		},
+		as				: {
+			control			: false,
+			table			: {
+				category		: 'Miscellaneous',
+			},
+		},
 	},
 	parameters		: {
 		componentSubtitle	: 'A clickable component that can have text and icons',
@@ -113,7 +111,6 @@ const Meta: ComponentMeta<typeof Button> = {
 };
 
 //	Declare overview story
-//	eslint-disable-next-line require-jsdoc
 const Overview: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 //	Exports
@@ -121,3 +118,7 @@ export default Meta;
 export { Overview };
 export { default as Variants } from './Variants';
 export { default as Disabled } from './Disabled';
+export { default as WithIcon } from './With Icon';
+export { default as IconOnly } from './Icon Only';
+export { default as AsLink } from './As Link';
+export { default as CustomStyles } from './Custom Styles';

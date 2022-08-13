@@ -1,19 +1,17 @@
 //	Type Imports
-import type { IconName, IconProps } from '@/components/Icon';
-import type { ComponentProps } from '@/types';
+import type { Component } from 'react';
 import type { MotionProps } from 'framer-motion';
+import type { ComponentProps } from '@/types';
+import type { IconName, IconProps } from '@/components/Icon';
 
 //	Declare component props
 interface ButtonProps extends ComponentProps, MotionProps {
 	/**
-	 * What element should the button be rendered as?
+	 * What element should the button container be rendered as?
 	 *
-	 * ! **NOTE** when rendering as an `<a />` you must pass a `href` tag!
-	 *
-	 * @type {'button' | 'a'}
-	 * @default 'button'
+	 * @type {Component}
 	 * */
-	as?				: 'button' | 'a' | any,
+	as?				: Component | any,
 
 	/**
 	 * The button's text

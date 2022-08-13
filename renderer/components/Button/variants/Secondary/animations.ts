@@ -1,10 +1,5 @@
 //	Declare button animations
-const SecondaryButtonAnimations = {
-	initial			: {
-		color			: '#7D40FF',
-		backgroundColor	: 'rgba(255, 255, 255, 0)',
-		border			: '2px solid #7D40FF',
-	},
+const SecondaryButtonAnimations = ({ color, borderColor }) => ({
 	disabled		: {
 		color			: '#E4E4F0',
 		backgroundColor	: '#F8F8F8',
@@ -14,16 +9,16 @@ const SecondaryButtonAnimations = {
 	hover			: {
 		y				: -2,
 
-		boxShadow		: '0 2px 0 0 #7D40FF',
+		boxShadow		: `0 2px 0 0 ${borderColor || color}`,
 	},
 	tap				: {
 		y				: -1,
 
-		backgroundColor	: '#F5F5F5',
+		filter			: 'brightness(85%)',
 
-		boxShadow		: '0 1px 0 0 #7D40FF',
+		boxShadow		: `0 1px 0 0 ${borderColor || color}`,
 	},
-};
+});
 
 //  Exports
 export {

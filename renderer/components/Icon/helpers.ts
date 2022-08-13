@@ -23,7 +23,6 @@ import type { ComposeIconCssProps } from './types';
  */
 const composeIconCss = ({
 	name,
-	disabled,
 	width,
 	height,
 	size,
@@ -38,10 +37,6 @@ const composeIconCss = ({
 	//	Get icon type
 	const iconType = Icons[name].type;
 
-	//	Override color if disabled
-	const finalColor = disabled ? '$text200' : color;
-	console.log(name, disabled, finalColor);
-
 	//	Declare output css
 	const output: CSS = {
 		strokeWidth		: thickness,
@@ -49,8 +44,8 @@ const composeIconCss = ({
 		transform		: `rotate(${rotation}deg)`,
 		width			: width || size,
 		height			: height || size,
-		fill			: iconType === 'filled' ? finalColor : undefined,
-		stroke			: iconType === 'lined' ? finalColor : undefined,
+		fill			: iconType === 'filled' ? color : undefined,
+		stroke			: iconType === 'lined' ? color : undefined,
 		opacity,
 		...(css || {}),
 	};

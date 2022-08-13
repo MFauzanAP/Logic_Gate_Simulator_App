@@ -15,8 +15,6 @@ const ButtonContainer = styled(
 
 		px					: '$space4',
 
-		flex				: 0,
-		flexGrow			: 0,
 		gap					: '$space2',
 
 		color				: '$text600',
@@ -37,6 +35,14 @@ const ButtonContainer = styled(
 						backgroundImage		: 'none',
 						border				: 'none',
 					},
+				},
+			},
+
+			round			: {
+				true			: {
+					aspectRatio		: '1/1',
+
+					px				: 0,
 				},
 			},
 
