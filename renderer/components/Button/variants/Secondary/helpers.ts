@@ -2,7 +2,7 @@
 import { SecondaryButtonAnimations } from './animations';
 
 //	Type Imports
-import type { ComposeAnimationsProps } from './types';
+import type { ComposeAnimationsProps } from '../../types';
 
 /**
  * Composes a dynamic animation object

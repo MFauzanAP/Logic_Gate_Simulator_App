@@ -29,8 +29,19 @@ type ComposeIconColorProps = {
 	ref			: MutableRefObject<HTMLButtonElement>,
 };
 
+//	Declare compose animations prop type
+type ComposeAnimationsProps = {
+	/**
+	 * Reference to the button component
+	 * 
+	 * @type {MutableRefObject}
+	 */
+	ref			: MutableRefObject<HTMLDivElement | HTMLButtonElement>,
+};
+
 //	Exports
 export type {
 	ComposeButtonLabelProps,
 	ComposeIconColorProps,
+	ComposeAnimationsProps,
 };

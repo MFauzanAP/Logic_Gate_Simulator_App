@@ -5,7 +5,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Icon from '@/components/Icon';
 
 //	Helper Imports
-import { composeButtonLabel, composeIconColor } from './helpers';
+import { composeButtonLabel, composeIconColor, composeButtonAnimations } from './helpers';
 
 //	Style Imports
 import { ButtonContainer, ButtonLabel, ButtonLink } from './styles';
@@ -28,6 +28,7 @@ const Button = ({
 	labelProps,
 	startIconProps,
 	endIconProps,
+	variants,
 	...props
 }: Props) => {
 
@@ -35,6 +36,7 @@ const Button = ({
 	const ref = useRef() as MutableRefObject<HTMLButtonElement>;
 
 	//	Create state variables
+	const [ ButtonAnimations, setButtonAnimations ] = useState({});
 	const [ buttonLabel, setButtonLabel ] = useState('');
 	const [ iconColor, setIconColor ] = useState('');
 
@@ -42,19 +44,32 @@ const Button = ({
 	useEffect(() => {
 
 		//	Compose button label and icon color
+		setButtonAnimations(composeButtonAnimations({ ref }));
 		setButtonLabel(composeButtonLabel({ label, children }));
 		setIconColor(composeIconColor({ ref }));
 
-	}, [ label, children ]);
+	}, [ label, children, ref ]);
 
 	//	Declare button content
 	const buttonContent = (
 		<ButtonContainer
-			ref			= {ref}
+
+			/* Appearance */
 			type		= {'button'}
 			round		= {buttonLabel === ''}
 			disabled	= {disabled}
+
+			/* Animations */
+			animate			= {props.disabled ? 'disabled' : 'initial'}
+			whileHover		= {'hover'}
+			whileTap		= {'tap'}
+			variants		= {{ ...ButtonAnimations, ...variants }}
+			transition		= {{ duration: 0.15 }}
+
+			/* Other Props */
+			ref			= {ref}
 			{...props}
+
 		>
 
 			{/* Start Icon */}

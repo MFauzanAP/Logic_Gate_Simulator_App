@@ -1,5 +1,8 @@
+//	Animation Imports
+import { ButtonAnimations } from './animations';
+
 //	Type Imports
-import type { ComposeButtonLabelProps, ComposeIconColorProps } from './types';
+import type { ComposeAnimationsProps, ComposeButtonLabelProps, ComposeIconColorProps } from './types';
 
 /**
  * Composes button content from its children and label props.
@@ -39,8 +42,28 @@ const composeIconColor = ({ ref }: ComposeIconColorProps) => {
 
 };
 
+/**
+ * Composes a dynamic animation object
+ * 
+ * @param 	{MutableRefObject} 	ref		Reference to the button component
+ * @returns	{Object}					Final animations object
+ */
+const composeButtonAnimations = ({ ref }: ComposeAnimationsProps) => {
+
+	//	Make sure this function is called on the client and not on the server
+	if (typeof window === 'undefined') return undefined;
+
+	//	Extract computed styles from the button
+	const { backgroundColor } = window.getComputedStyle(ref.current);
+
+	//	Return computed color
+	return ButtonAnimations({ backgroundColor });
+
+};
+
 //	Exports
 export {
 	composeButtonLabel,
 	composeIconColor,
+	composeButtonAnimations,
 };

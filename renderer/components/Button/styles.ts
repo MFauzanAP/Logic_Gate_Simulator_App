@@ -18,7 +18,7 @@ const ButtonContainer = styled(
 		gap					: '$space2',
 
 		color				: '$text600',
-		backgroundColor		: '$background200',
+		backgroundColor		: '$background100',
 		border				: 'none',
 
 		textDecoration		: 'none',
